@@ -1,7 +1,9 @@
 # Hashes of file build rules.
+b18fce6c875785058311cb79b83468af moc_calibrationdialog.cxx
 4e87b2c83d6cc20d9829b356727221b8 moc_mainwindow.cxx
 dcaf1cde11975186d43d6aeb0fe817c3 moc_pclviewer.cxx
 7fcfb80ff342d260a31d88bca608c1e9 moc_rscloud.cxx
 ef5f1fd2c2e610bb28d974af7193926c moc_rscloudgrabber.cxx
+7af0df55ef24f7a7c445076c36bf2c32 ui_calibrationdialog.h
 446d4aed46cb142a83ef113ce867b245 ui_mainwindow.h
 d84591dec2eccbe8e6f5cdcc76defa11 ui_pclviewer.h

@@ -28,7 +28,7 @@ public:
     QVTKWidget *qvtkWidget;
     QPushButton *scanButton;
     QPushButton *saveButton;
-    QPushButton *pushButton;
+    QPushButton *calibButton;
 
     void setupUi(QMainWindow *PCLViewer)
     {
@@ -48,9 +48,9 @@ public:
         saveButton = new QPushButton(centralwidget);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
         saveButton->setGeometry(QRect(40, 200, 99, 27));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(30, 90, 171, 51));
+        calibButton = new QPushButton(centralwidget);
+        calibButton->setObjectName(QString::fromUtf8("calibButton"));
+        calibButton->setGeometry(QRect(30, 90, 171, 51));
         PCLViewer->setCentralWidget(centralwidget);
 
         retranslateUi(PCLViewer);
@@ -63,7 +63,7 @@ public:
         PCLViewer->setWindowTitle(QApplication::translate("PCLViewer", "PCLViewer", 0, QApplication::UnicodeUTF8));
         scanButton->setText(QApplication::translate("PCLViewer", "Scansione", 0, QApplication::UnicodeUTF8));
         saveButton->setText(QApplication::translate("PCLViewer", "Salva", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("PCLViewer", "Calibrazione", 0, QApplication::UnicodeUTF8));
+        calibButton->setText(QApplication::translate("PCLViewer", "Calibrazione", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

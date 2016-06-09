@@ -114,6 +114,30 @@ pcl_visualizer/fast:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/build
 .PHONY : pcl_visualizer/fast
 
+calibrationdialog.o: calibrationdialog.cpp.o
+.PHONY : calibrationdialog.o
+
+# target to build an object file
+calibrationdialog.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o
+.PHONY : calibrationdialog.cpp.o
+
+calibrationdialog.i: calibrationdialog.cpp.i
+.PHONY : calibrationdialog.i
+
+# target to preprocess a source file
+calibrationdialog.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.i
+.PHONY : calibrationdialog.cpp.i
+
+calibrationdialog.s: calibrationdialog.cpp.s
+.PHONY : calibrationdialog.s
+
+# target to generate assembly for a file
+calibrationdialog.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.s
+.PHONY : calibrationdialog.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -161,6 +185,30 @@ mainwindow.s: mainwindow.cpp.s
 mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
+
+moc_calibrationdialog.o: moc_calibrationdialog.cxx.o
+.PHONY : moc_calibrationdialog.o
+
+# target to build an object file
+moc_calibrationdialog.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
+.PHONY : moc_calibrationdialog.cxx.o
+
+moc_calibrationdialog.i: moc_calibrationdialog.cxx.i
+.PHONY : moc_calibrationdialog.i
+
+# target to preprocess a source file
+moc_calibrationdialog.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.i
+.PHONY : moc_calibrationdialog.cxx.i
+
+moc_calibrationdialog.s: moc_calibrationdialog.cxx.s
+.PHONY : moc_calibrationdialog.s
+
+# target to generate assembly for a file
+moc_calibrationdialog.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.s
+.PHONY : moc_calibrationdialog.cxx.s
 
 moc_mainwindow.o: moc_mainwindow.cxx.o
 .PHONY : moc_mainwindow.o
@@ -291,12 +339,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pcl_visualizer"
+	@echo "... calibrationdialog.o"
+	@echo "... calibrationdialog.i"
+	@echo "... calibrationdialog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... moc_calibrationdialog.o"
+	@echo "... moc_calibrationdialog.i"
+	@echo "... moc_calibrationdialog.s"
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"

@@ -2,7 +2,6 @@
 #define PCLVIEWER_H
 
 #include <iostream>
-
 // Qt
 #include <QMainWindow>
 #include <QGroupBox>
@@ -19,7 +18,8 @@
 #include <pcl/point_types.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <vtkRenderWindow.h>
-
+//local
+#include "calibrationdialog.h"
 #include "rscloudgrabber.h"
 
 
@@ -47,11 +47,13 @@ private slots:
 
    void on_scanButton_clicked();
 
+   void on_calibButton_clicked();
+
 private:
 
     Ui::PCLViewer *ui;
     RScloudgrabber *rsgrabber;
-
+    CalibrationDialog *calibDialog;
 
 };
 

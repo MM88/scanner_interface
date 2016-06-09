@@ -8,7 +8,7 @@
 #include <QString>
 #include <QHBoxLayout>
 #include <pcl/io/ply_io.h>
-
+#include "calibrationdialog.h"
 
 PCLViewer::PCLViewer (QWidget *parent) :
   QMainWindow (parent),
@@ -76,4 +76,11 @@ void PCLViewer::on_scanButton_clicked()
     //delete grabber;
     ui->saveButton->setVisible(true);
     ui->scanButton->update();
+}
+
+
+void PCLViewer::on_calibButton_clicked()
+{
+    calibDialog = new CalibrationDialog(this);
+    calibDialog->show();
 }

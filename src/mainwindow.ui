@@ -62,7 +62,7 @@
      <string>Salva</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="calibButton">
     <property name="geometry">
      <rect>
       <x>30</x>

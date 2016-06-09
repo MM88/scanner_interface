@@ -15,14 +15,17 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     rscloudgrabber.cpp \
-    rscloud.cpp
+    rscloud.cpp \
+    calibrationdialog.cpp
 
 HEADERS  += \
     mainwindow.h \
     rscloudgrabber.h \
-    rscloud.h
+    rscloud.h \
+    calibrationdialog.h
 
 FORMS    += \
-    mainwindow.ui
+    mainwindow.ui \
+    calibrationdialog.ui
 
 

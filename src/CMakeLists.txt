@@ -14,9 +14,9 @@ add_definitions     (${PCL_DEFINITIONS})
 
 include_directories(${PCL_INCLUDE_DIRS}) 
 include_directories(${PROJECT_SOURCE_DIR}) 
-set  (project_SOURCES main.cpp mainwindow.cpp rscloudgrabber.cpp rscloud.cpp )
-set  (project_HEADERS mainwindow.h rscloudgrabber.h rscloud.h )
-set  (project_FORMS   mainwindow.ui)
+set  (project_SOURCES main.cpp mainwindow.cpp rscloudgrabber.cpp rscloud.cpp calibrationdialog.cpp )
+set  (project_HEADERS mainwindow.h rscloudgrabber.h rscloud.h calibrationdialog.h)
+set  (project_FORMS   mainwindow.ui calibrationdialog.ui)
 set  (VTK_LIBRARIES   vtkRendering vtkGraphics vtkHybrid QVTK)
 
 

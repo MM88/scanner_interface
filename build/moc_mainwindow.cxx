@@ -22,7 +22,7 @@ static const uint qt_meta_data_PCLViewer[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,7 @@ static const uint qt_meta_data_PCLViewer[] = {
  // slots: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x08,
       35,   10,   10,   10, 0x08,
+      59,   10,   10,   10, 0x08,
 
        0        // eod
 };
@@ -39,6 +40,7 @@ static const uint qt_meta_data_PCLViewer[] = {
 static const char qt_meta_stringdata_PCLViewer[] = {
     "PCLViewer\0\0on_saveButton_clicked()\0"
     "on_scanButton_clicked()\0"
+    "on_calibButton_clicked()\0"
 };
 
 void PCLViewer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -49,6 +51,7 @@ void PCLViewer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->on_saveButton_clicked(); break;
         case 1: _t->on_scanButton_clicked(); break;
+        case 2: _t->on_calibButton_clicked(); break;
         default: ;
         }
     }
@@ -87,9 +90,9 @@ int PCLViewer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
