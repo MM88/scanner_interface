@@ -1,0 +1,408 @@
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2043024312/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2043024312.dir/build.make CMakeFiles/cmTryCompileExec2043024312.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2043024312.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2043024312.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec2043024312.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec2043024312.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec2043024312.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec2043024312/fast" non riuscito
+make: *** [cmTryCompileExec2043024312/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3608885001/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3608885001.dir/build.make CMakeFiles/cmTryCompileExec3608885001.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3608885001.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3608885001.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3608885001.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec3608885001.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec3608885001.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec3608885001/fast" non riuscito
+make: *** [cmTryCompileExec3608885001/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3589684384/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3589684384.dir/build.make CMakeFiles/cmTryCompileExec3589684384.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3589684384.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3589684384.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3589684384.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec3589684384.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec3589684384.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec3589684384/fast" non riuscito
+make: *** [cmTryCompileExec3589684384/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1678485941/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1678485941.dir/build.make CMakeFiles/cmTryCompileExec1678485941.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1678485941.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1678485941.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec1678485941.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec1678485941.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec1678485941.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec1678485941/fast" non riuscito
+make: *** [cmTryCompileExec1678485941/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2190037967/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2190037967.dir/build.make CMakeFiles/cmTryCompileExec2190037967.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2190037967.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2190037967.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec2190037967.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec2190037967.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec2190037967.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec2190037967/fast" non riuscito
+make: *** [cmTryCompileExec2190037967/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec449031234/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec449031234.dir/build.make CMakeFiles/cmTryCompileExec449031234.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec449031234.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec449031234.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec449031234.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec449031234.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec449031234.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec449031234/fast" non riuscito
+make: *** [cmTryCompileExec449031234/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4189264213/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4189264213.dir/build.make CMakeFiles/cmTryCompileExec4189264213.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4189264213.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec4189264213.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec4189264213.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec4189264213.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec4189264213.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec4189264213/fast" non riuscito
+make: *** [cmTryCompileExec4189264213/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4197921021/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4197921021.dir/build.make CMakeFiles/cmTryCompileExec4197921021.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4197921021.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec4197921021.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec4197921021.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec4197921021.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: *** [CMakeFiles/cmTryCompileExec4197921021.dir/CheckSymbolExists.cxx.o] Errore 1
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec4197921021/fast" non riuscito
+make: *** [cmTryCompileExec4197921021/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec837621870/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec837621870.dir/build.make CMakeFiles/cmTryCompileExec837621870.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec837621870.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec837621870.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec837621870.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec837621870.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: *** [CMakeFiles/cmTryCompileExec837621870.dir/CheckSymbolExists.cxx.o] Errore 1
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp"
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec837621870/fast" non riuscito
+make: *** [cmTryCompileExec837621870/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/qt_visualizer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2721341057/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2721341057.dir/build.make CMakeFiles/cmTryCompileExec2721341057.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2721341057.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2721341057.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec2721341057.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec2721341057.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: *** [CMakeFiles/cmTryCompileExec2721341057.dir/CheckSymbolExists.cxx.o] Errore 1
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec2721341057/fast" non riuscito
+make: *** [cmTryCompileExec2721341057/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4189851686/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4189851686.dir/build.make CMakeFiles/cmTryCompileExec4189851686.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4189851686.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec4189851686.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec4189851686.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec4189851686.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec4189851686.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec4189851686/fast" non riuscito
+make: *** [cmTryCompileExec4189851686/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1791745340/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1791745340.dir/build.make CMakeFiles/cmTryCompileExec1791745340.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1791745340.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1791745340.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec1791745340.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec1791745340.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec1791745340.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec1791745340/fast" non riuscito
+make: *** [cmTryCompileExec1791745340/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

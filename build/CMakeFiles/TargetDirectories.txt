@@ -1,0 +1,1 @@
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/pcl_visualizer.dir
