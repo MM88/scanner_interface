@@ -67,13 +67,12 @@ void PCLViewer::on_scanButton_clicked()
 {
     rsgrabber = new GrabberProgressDialog;
     mesh = rsgrabber->perform()[0].getPolygonmesh();
-//    RScloudgrabber *grabber = RScloudgrabber::Instance();
-//    grabber->grab_clouds();
+
 //    mesh = rsgrabber->getPointcloudvector()[0].getPolygonmesh();
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();
-    //delete grabber;
+
     ui->saveButton->setVisible(true);
     ui->scanButton->update();
 }

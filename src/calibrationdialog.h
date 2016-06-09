@@ -6,7 +6,7 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <vtkRenderWindow.h>
 #include <QDialog>
-
+#include "rscloud.h"
 #define pointT pcl::PointXYZRGB // con colori
 //#define pointTnormal pcl::PointXYZRGBNormal // con colori
 // #define pointT pcl::PointXYZ // senza colori
@@ -26,6 +26,7 @@ public:
 
 protected:
     boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
+    std::vector<RScloud> pointcloudvector;
 
 
 private slots:

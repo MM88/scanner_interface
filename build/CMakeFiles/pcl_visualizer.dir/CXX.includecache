@@ -73,6 +73,8 @@ fstream
 -
 rscloud.h
 /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
+cloudsgrabber.h
+/home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 opencv/cv.h
 -
 opencv2/core/core.hpp
@@ -93,6 +95,8 @@ vtkRenderWindow.h
 -
 QDialog
 -
+rscloud.h
+/home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
 
 /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp
 librealsense/rs.hpp

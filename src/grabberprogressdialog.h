@@ -33,14 +33,8 @@ public:
             GrabberProgressDialog::outPath = outpath;
         }
 
-
-
-
-
 private:
         int steps;
-//        pcl::PointCloud<pointT>::Ptr txt2pointcloud(std::vector<float3rgb>);
-//        std::vector<RScloud> pointcloudvector;
 //        int num_border_to_remove = 3;
 //        bool filtering = true;
 //        bool remove_border = true;

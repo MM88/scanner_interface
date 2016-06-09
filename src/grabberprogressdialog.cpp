@@ -10,7 +10,7 @@ GrabberProgressDialog::GrabberProgressDialog(QObject *parent) :
 {
     pd = new QProgressDialog();
     pd = new QProgressDialog("Elaborazione in corso", "Annulla", 0, 3);
-//    pd->setWindowModality(Qt::WindowModal);
+    pd->setWindowModality(Qt::WindowModal);
     connect(pd, SIGNAL(canceled()), this, SLOT(cancel()));
     pd->show();
 }
@@ -29,10 +29,17 @@ std::vector<RScloud> GrabberProgressDialog::perform()
 
     grabber->processClouds();
     boost::this_thread::sleep (boost::posix_time::seconds (1));
+
     steps++;
     pd->setValue(steps);
 
-    return grabber->getPointcloudvector();
+    boost::this_thread::sleep (boost::posix_time::seconds (1));
+
+    std::vector<RScloud> pointcloudvector =  grabber->getPointcloudvector();
+    delete grabber;
+
+    steps = 0;
+    return pointcloudvector;
 
 }
 

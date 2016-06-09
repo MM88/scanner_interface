@@ -5,6 +5,7 @@ CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o
  /home/miky/QtCreatorProjects/scanner_interface/build/ui_calibrationdialog.h
  /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.cpp
  /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+ /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
  /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
@@ -3761,6 +3762,7 @@ CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /home/miky/QtCreatorProjects/scanner_interface/build/moc_calibrationdialog.cxx
  /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+ /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense
@@ -3768,10 +3770,17 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/eigen3/Eigen/Eigenvalues
  /usr/include/eigen3/Eigen/Geometry
  /usr/include/eigen3/Eigen/Householder
+ /usr/include/eigen3/Eigen/IterativeLinearSolvers
  /usr/include/eigen3/Eigen/Jacobi
  /usr/include/eigen3/Eigen/LU
+ /usr/include/eigen3/Eigen/OrderingMethods
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/Sparse
+ /usr/include/eigen3/Eigen/SparseCholesky
+ /usr/include/eigen3/Eigen/SparseCore
+ /usr/include/eigen3/Eigen/SparseLU
+ /usr/include/eigen3/Eigen/SparseQR
  /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
@@ -3874,6 +3883,7 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h
  /usr/include/eigen3/Eigen/src/Core/util/Memory.h
  /usr/include/eigen3/Eigen/src/Core/util/Meta.h
+ /usr/include/eigen3/Eigen/src/Core/util/NonMPL2.h
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
  /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h
  /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h
@@ -3939,6 +3949,11 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h
  /usr/include/eigen3/Eigen/src/Householder/Householder.h
  /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h
+ /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h
+ /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h
+ /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h
+ /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h
+ /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
  /usr/include/eigen3/Eigen/src/LU/Determinant.h
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
@@ -3946,6 +3961,9 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
+ /usr/include/eigen3/Eigen/src/OrderingMethods/Amd.h
+ /usr/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h
+ /usr/include/eigen3/Eigen/src/OrderingMethods/Ordering.h
  /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR_MKL.h
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
@@ -3954,11 +3972,57 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h
+ /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
+ /usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h
+ /usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h
+ /usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h
+ /usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h
+ /usr/include/eigen3/Eigen/src/SparseCore/SparseView.h
+ /usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h
+ /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h
+ /usr/include/eigen3/Eigen/src/SparseQR/SparseQR.h
  /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
  /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/misc/Solve.h
+ /usr/include/eigen3/Eigen/src/misc/SparseSolve.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h
@@ -4099,10 +4163,12 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkDataArrayTemplate.txx
  /usr/include/vtk-5.10/vtkDataArrayTemplateImplicit.txx
  /usr/include/vtk-5.10/vtkDataObject.h
+ /usr/include/vtk-5.10/vtkDataReader.h
  /usr/include/vtk-5.10/vtkDataSet.h
  /usr/include/vtk-5.10/vtkDataSetAttributes.h
  /usr/include/vtk-5.10/vtkDataSetMapper.h
  /usr/include/vtk-5.10/vtkDataSetSurfaceFilter.h
+ /usr/include/vtk-5.10/vtkDataWriter.h
  /usr/include/vtk-5.10/vtkDebugLeaksManager.h
  /usr/include/vtk-5.10/vtkFieldData.h
  /usr/include/vtk-5.10/vtkFloatArray.h
@@ -4112,6 +4178,8 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkIdList.h
  /usr/include/vtk-5.10/vtkIdTypeArray.h
  /usr/include/vtk-5.10/vtkImageAlgorithm.h
+ /usr/include/vtk-5.10/vtkImageData.h
+ /usr/include/vtk-5.10/vtkImageReader2.h
  /usr/include/vtk-5.10/vtkIndent.h
  /usr/include/vtk-5.10/vtkInformation.h
  /usr/include/vtk-5.10/vtkInformationDoubleVectorKey.h
@@ -4130,17 +4198,24 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkMath.h
  /usr/include/vtk-5.10/vtkMathConfigure.h
  /usr/include/vtk-5.10/vtkMatrix4x4.h
+ /usr/include/vtk-5.10/vtkOBJReader.h
  /usr/include/vtk-5.10/vtkOStrStreamWrapper.h
  /usr/include/vtk-5.10/vtkOStreamWrapper.h
  /usr/include/vtk-5.10/vtkObject.h
  /usr/include/vtk-5.10/vtkObjectBase.h
  /usr/include/vtk-5.10/vtkObjectFactory.h
+ /usr/include/vtk-5.10/vtkPLYReader.h
+ /usr/include/vtk-5.10/vtkPLYWriter.h
+ /usr/include/vtk-5.10/vtkPNGReader.h
  /usr/include/vtk-5.10/vtkPointData.h
  /usr/include/vtk-5.10/vtkPointSet.h
  /usr/include/vtk-5.10/vtkPoints.h
  /usr/include/vtk-5.10/vtkPolyData.h
  /usr/include/vtk-5.10/vtkPolyDataAlgorithm.h
  /usr/include/vtk-5.10/vtkPolyDataMapper.h
+ /usr/include/vtk-5.10/vtkPolyDataNormals.h
+ /usr/include/vtk-5.10/vtkPolyDataReader.h
+ /usr/include/vtk-5.10/vtkPolyDataWriter.h
  /usr/include/vtk-5.10/vtkPolygon.h
  /usr/include/vtk-5.10/vtkPolynomialSolversUnivariate.h
  /usr/include/vtk-5.10/vtkProp.h
@@ -4151,6 +4226,8 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkRenderWindow.h
  /usr/include/vtk-5.10/vtkRenderer.h
  /usr/include/vtk-5.10/vtkRendererCollection.h
+ /usr/include/vtk-5.10/vtkSTLReader.h
+ /usr/include/vtk-5.10/vtkSTLWriter.h
  /usr/include/vtk-5.10/vtkScalarsToColors.h
  /usr/include/vtk-5.10/vtkSetGet.h
  /usr/include/vtk-5.10/vtkSmartPointer.h
@@ -4158,6 +4235,8 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkSortDataArray.h
  /usr/include/vtk-5.10/vtkSphereSource.h
  /usr/include/vtk-5.10/vtkStdString.h
+ /usr/include/vtk-5.10/vtkStructuredData.h
+ /usr/include/vtk-5.10/vtkStructuredGrid.h
  /usr/include/vtk-5.10/vtkSystemIncludes.h
  /usr/include/vtk-5.10/vtkTextProperty.h
  /usr/include/vtk-5.10/vtkTexture.h
@@ -4171,13 +4250,48 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/include/vtk-5.10/vtkVariantInlineOperators.h
  /usr/include/vtk-5.10/vtkVectorText.h
  /usr/include/vtk-5.10/vtkVersion.h
+ /usr/include/vtk-5.10/vtkVertexGlyphFilter.h
  /usr/include/vtk-5.10/vtkViewport.h
  /usr/include/vtk-5.10/vtkVolume.h
  /usr/include/vtk-5.10/vtkVolumeCollection.h
  /usr/include/vtk-5.10/vtkWeakPointerBase.h
  /usr/include/vtk-5.10/vtkWin32Header.h
  /usr/include/vtk-5.10/vtkWindow.h
+ /usr/include/vtk-5.10/vtkWriter.h
  /usr/include/vtk-5.10/vtksys/DateStamp.h
+ /usr/local/include/flann/algorithms/all_indices.h
+ /usr/local/include/flann/algorithms/autotuned_index.h
+ /usr/local/include/flann/algorithms/center_chooser.h
+ /usr/local/include/flann/algorithms/composite_index.h
+ /usr/local/include/flann/algorithms/dist.h
+ /usr/local/include/flann/algorithms/hierarchical_clustering_index.h
+ /usr/local/include/flann/algorithms/kdtree_cuda_3d_index.h
+ /usr/local/include/flann/algorithms/kdtree_index.h
+ /usr/local/include/flann/algorithms/kdtree_single_index.h
+ /usr/local/include/flann/algorithms/kmeans_index.h
+ /usr/local/include/flann/algorithms/linear_index.h
+ /usr/local/include/flann/algorithms/lsh_index.h
+ /usr/local/include/flann/algorithms/nn_index.h
+ /usr/local/include/flann/config.h
+ /usr/local/include/flann/defines.h
+ /usr/local/include/flann/flann.hpp
+ /usr/local/include/flann/general.h
+ /usr/local/include/flann/nn/ground_truth.h
+ /usr/local/include/flann/nn/index_testing.h
+ /usr/local/include/flann/util/allocator.h
+ /usr/local/include/flann/util/any.h
+ /usr/local/include/flann/util/dynamic_bitset.h
+ /usr/local/include/flann/util/heap.h
+ /usr/local/include/flann/util/logger.h
+ /usr/local/include/flann/util/lsh_table.h
+ /usr/local/include/flann/util/matrix.h
+ /usr/local/include/flann/util/params.h
+ /usr/local/include/flann/util/random.h
+ /usr/local/include/flann/util/result_set.h
+ /usr/local/include/flann/util/sampling.h
+ /usr/local/include/flann/util/saving.h
+ /usr/local/include/flann/util/serialization.h
+ /usr/local/include/flann/util/timer.h
  /usr/local/include/pcl-1.8/pcl/ModelCoefficients.h
  /usr/local/include/pcl-1.8/pcl/PCLHeader.h
  /usr/local/include/pcl-1.8/pcl/PCLImage.h
@@ -4187,33 +4301,137 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
  /usr/local/include/pcl-1.8/pcl/PolygonMesh.h
  /usr/local/include/pcl-1.8/pcl/TextureMesh.h
  /usr/local/include/pcl-1.8/pcl/Vertices.h
+ /usr/local/include/pcl-1.8/pcl/cloud_iterator.h
+ /usr/local/include/pcl-1.8/pcl/common/angles.h
+ /usr/local/include/pcl-1.8/pcl/common/centroid.h
  /usr/local/include/pcl-1.8/pcl/common/colors.h
+ /usr/local/include/pcl-1.8/pcl/common/common.h
+ /usr/local/include/pcl-1.8/pcl/common/common_headers.h
  /usr/local/include/pcl-1.8/pcl/common/concatenate.h
  /usr/local/include/pcl-1.8/pcl/common/copy_point.h
+ /usr/local/include/pcl-1.8/pcl/common/distances.h
  /usr/local/include/pcl-1.8/pcl/common/eigen.h
+ /usr/local/include/pcl-1.8/pcl/common/file_io.h
+ /usr/local/include/pcl-1.8/pcl/common/geometry.h
+ /usr/local/include/pcl-1.8/pcl/common/impl/accumulators.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/angles.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/centroid.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/common.hpp
  /usr/local/include/pcl-1.8/pcl/common/impl/copy_point.hpp
  /usr/local/include/pcl-1.8/pcl/common/impl/eigen.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/file_io.hpp
  /usr/local/include/pcl-1.8/pcl/common/impl/io.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/norms.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/projection_matrix.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/transforms.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/vector_average.hpp
  /usr/local/include/pcl-1.8/pcl/common/io.h
+ /usr/local/include/pcl-1.8/pcl/common/norms.h
  /usr/local/include/pcl-1.8/pcl/common/point_tests.h
+ /usr/local/include/pcl-1.8/pcl/common/projection_matrix.h
+ /usr/local/include/pcl-1.8/pcl/common/time.h
+ /usr/local/include/pcl-1.8/pcl/common/transforms.h
+ /usr/local/include/pcl-1.8/pcl/common/vector_average.h
+ /usr/local/include/pcl-1.8/pcl/console/parse.h
  /usr/local/include/pcl-1.8/pcl/console/print.h
+ /usr/local/include/pcl-1.8/pcl/console/time.h
  /usr/local/include/pcl-1.8/pcl/conversions.h
  /usr/local/include/pcl-1.8/pcl/correspondence.h
  /usr/local/include/pcl-1.8/pcl/exceptions.h
+ /usr/local/include/pcl-1.8/pcl/features/boundary.h
+ /usr/local/include/pcl-1.8/pcl/features/eigen.h
+ /usr/local/include/pcl-1.8/pcl/features/feature.h
+ /usr/local/include/pcl-1.8/pcl/features/impl/boundary.hpp
+ /usr/local/include/pcl-1.8/pcl/features/impl/feature.hpp
+ /usr/local/include/pcl-1.8/pcl/features/impl/normal_3d.hpp
+ /usr/local/include/pcl-1.8/pcl/features/normal_3d.h
+ /usr/local/include/pcl-1.8/pcl/filters/boost.h
+ /usr/local/include/pcl-1.8/pcl/filters/filter.h
+ /usr/local/include/pcl-1.8/pcl/filters/filter_indices.h
+ /usr/local/include/pcl-1.8/pcl/filters/impl/filter.hpp
+ /usr/local/include/pcl-1.8/pcl/filters/impl/filter_indices.hpp
+ /usr/local/include/pcl-1.8/pcl/filters/impl/passthrough.hpp
+ /usr/local/include/pcl-1.8/pcl/filters/impl/statistical_outlier_removal.hpp
+ /usr/local/include/pcl-1.8/pcl/filters/impl/voxel_grid.hpp
+ /usr/local/include/pcl-1.8/pcl/filters/passthrough.h
+ /usr/local/include/pcl-1.8/pcl/filters/statistical_outlier_removal.h
+ /usr/local/include/pcl-1.8/pcl/filters/voxel_grid.h
  /usr/local/include/pcl-1.8/pcl/for_each_type.h
  /usr/local/include/pcl-1.8/pcl/geometry/planar_polygon.h
+ /usr/local/include/pcl-1.8/pcl/impl/cloud_iterator.hpp
  /usr/local/include/pcl-1.8/pcl/impl/pcl_base.hpp
  /usr/local/include/pcl-1.8/pcl/impl/point_types.hpp
+ /usr/local/include/pcl-1.8/pcl/io/boost.h
+ /usr/local/include/pcl-1.8/pcl/io/file_io.h
+ /usr/local/include/pcl-1.8/pcl/io/impl/pcd_io.hpp
+ /usr/local/include/pcl-1.8/pcl/io/impl/vtk_lib_io.hpp
+ /usr/local/include/pcl-1.8/pcl/io/lzf.h
+ /usr/local/include/pcl-1.8/pcl/io/pcd_io.h
+ /usr/local/include/pcl-1.8/pcl/io/ply/byte_order.h
+ /usr/local/include/pcl-1.8/pcl/io/ply/io_operators.h
+ /usr/local/include/pcl-1.8/pcl/io/ply/ply.h
+ /usr/local/include/pcl-1.8/pcl/io/ply/ply_parser.h
+ /usr/local/include/pcl-1.8/pcl/io/ply_io.h
+ /usr/local/include/pcl-1.8/pcl/io/vtk_io.h
+ /usr/local/include/pcl-1.8/pcl/io/vtk_lib_io.h
+ /usr/local/include/pcl-1.8/pcl/kdtree/flann.h
+ /usr/local/include/pcl-1.8/pcl/kdtree/impl/kdtree_flann.hpp
+ /usr/local/include/pcl-1.8/pcl/kdtree/kdtree.h
+ /usr/local/include/pcl-1.8/pcl/kdtree/kdtree_flann.h
+ /usr/local/include/pcl-1.8/pcl/octree/impl/octree_pointcloud.hpp
+ /usr/local/include/pcl-1.8/pcl/octree/impl/octree_search.hpp
+ /usr/local/include/pcl-1.8/pcl/octree/octree_base.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_container.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_iterator.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_key.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_nodes.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_pointcloud.h
+ /usr/local/include/pcl-1.8/pcl/octree/octree_search.h
  /usr/local/include/pcl-1.8/pcl/pcl_base.h
  /usr/local/include/pcl-1.8/pcl/pcl_config.h
  /usr/local/include/pcl-1.8/pcl/pcl_exports.h
  /usr/local/include/pcl-1.8/pcl/pcl_macros.h
  /usr/local/include/pcl-1.8/pcl/point_cloud.h
+ /usr/local/include/pcl-1.8/pcl/point_representation.h
  /usr/local/include/pcl-1.8/pcl/point_traits.h
  /usr/local/include/pcl-1.8/pcl/point_types.h
+ /usr/local/include/pcl-1.8/pcl/range_image/impl/range_image.hpp
+ /usr/local/include/pcl-1.8/pcl/range_image/impl/range_image_planar.hpp
+ /usr/local/include/pcl-1.8/pcl/range_image/range_image.h
+ /usr/local/include/pcl-1.8/pcl/range_image/range_image_planar.h
  /usr/local/include/pcl-1.8/pcl/register_point_struct.h
+ /usr/local/include/pcl-1.8/pcl/registration/transforms.h
+ /usr/local/include/pcl-1.8/pcl/search/impl/kdtree.hpp
+ /usr/local/include/pcl-1.8/pcl/search/impl/organized.hpp
+ /usr/local/include/pcl-1.8/pcl/search/impl/search.hpp
+ /usr/local/include/pcl-1.8/pcl/search/kdtree.h
+ /usr/local/include/pcl-1.8/pcl/search/octree.h
+ /usr/local/include/pcl-1.8/pcl/search/organized.h
+ /usr/local/include/pcl-1.8/pcl/search/pcl_search.h
+ /usr/local/include/pcl-1.8/pcl/search/search.h
+ /usr/local/include/pcl-1.8/pcl/surface/boost.h
+ /usr/local/include/pcl-1.8/pcl/surface/concave_hull.h
+ /usr/local/include/pcl-1.8/pcl/surface/convex_hull.h
+ /usr/local/include/pcl-1.8/pcl/surface/eigen.h
+ /usr/local/include/pcl-1.8/pcl/surface/gp3.h
+ /usr/local/include/pcl-1.8/pcl/surface/impl/concave_hull.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/impl/convex_hull.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/impl/gp3.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/impl/mls.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/impl/processing.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/impl/reconstruction.hpp
+ /usr/local/include/pcl-1.8/pcl/surface/mls.h
+ /usr/local/include/pcl-1.8/pcl/surface/processing.h
+ /usr/local/include/pcl-1.8/pcl/surface/qhull.h
+ /usr/local/include/pcl-1.8/pcl/surface/reconstruction.h
+ /usr/local/include/pcl-1.8/pcl/surface/vtk_smoothing/vtk.h
+ /usr/local/include/pcl-1.8/pcl/surface/vtk_smoothing/vtk_mesh_smoothing_laplacian.h
+ /usr/local/include/pcl-1.8/pcl/surface/vtk_smoothing/vtk_mesh_smoothing_windowed_sinc.h
+ /usr/local/include/pcl-1.8/pcl/surface/vtk_smoothing/vtk_mesh_subdivision.h
+ /usr/local/include/pcl-1.8/pcl/surface/vtk_smoothing/vtk_utils.h
  /usr/local/include/pcl-1.8/pcl/visualization/area_picking_event.h
  /usr/local/include/pcl-1.8/pcl/visualization/boost.h
+ /usr/local/include/pcl-1.8/pcl/visualization/cloud_viewer.h
  /usr/local/include/pcl-1.8/pcl/visualization/common/actor_map.h
  /usr/local/include/pcl-1.8/pcl/visualization/common/common.h
  /usr/local/include/pcl-1.8/pcl/visualization/common/impl/common.hpp
