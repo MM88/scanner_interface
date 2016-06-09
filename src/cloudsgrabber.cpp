@@ -1,4 +1,3 @@
-#include "rscloudgrabber.h"
 #include <librealsense/rs.hpp>
 #include <opencv/cv.h>
 #include <opencv2/core/core.hpp>
@@ -6,24 +5,23 @@
 #include <stdio.h>
 #include <QPushButton>
 #include <fstream>
+#include "cloudsgrabber.h"
+#include "rscloud.h"
 
 using namespace rs;
 using namespace cv;
 
-RScloudgrabber::RScloudgrabber(QObject *parent) :
-    QObject(parent)
+CloudsGrabber* CloudsGrabber::instance = 0;
+CloudsGrabber* CloudsGrabber::Instance ()
 {
-    pd = new QProgressDialog();
-    pd = new QProgressDialog("Elaborazione in corso", "Annulla", 0, 4);
-    pd->setWindowModality(Qt::WindowModal);
-    connect(pd, SIGNAL(canceled()), this, SLOT(cancel()));
-    pd->show();
+    if (instance == 0)
+        instance = new CloudsGrabber;
+    return instance;
 }
 
-void RScloudgrabber::perform()
+void CloudsGrabber::grabClouds()
 {
-    steps = 1;
-    pd->setValue(steps);
+
     //... perform one percent of the operation
 
     // Turn on logging. We can separately enable logging to console or to file, and use different severity filters for each.
@@ -125,9 +123,6 @@ void RScloudgrabber::perform()
     }
     std::cout << float( clock () - begin_time ) /  CLOCKS_PER_SEC<<endl;
 
-    boost::this_thread::sleep (boost::posix_time::seconds (1));
-    steps++;
-    pd->setValue(steps);
 
     std::cout << "done scanning." << std::endl;
     std::cout << "saving clouds.." << std::endl;
@@ -135,7 +130,7 @@ void RScloudgrabber::perform()
 
     for (int i=0;i<txtcloudvector.size();i++){
             PointCloud<pointT>::Ptr cloud = txt2pointcloud(txtcloudvector[i]);
-            
+
 //            std::ostringstream matrixPath;
 //            std::string data;
 //            Eigen::Matrix4f transformMatrix = Eigen::Matrix4f::Identity();
@@ -160,39 +155,13 @@ void RScloudgrabber::perform()
             pointcloudvector.push_back(rscloud);
         }
 
-  std::cout << "cloud points " << pointcloudvector[0].getPointcloud()->points.size() << std::endl;
-
+    std::cout << "cloud points " << pointcloudvector[0].getPointcloud()->points.size() << std::endl;
     std::cout << "done saving." << std::endl;
-    boost::this_thread::sleep (boost::posix_time::seconds (1));
-    steps++;
-    pd->setValue(steps);
-
-
-    for (int i=0;i<pointcloudvector.size();i++)
-        pointcloudvector[i].processCloud();
-
-    boost::this_thread::sleep (boost::posix_time::seconds (1));
-    steps++;
-    pd->setValue(steps);
 
     return;
-
 }
 
-void RScloudgrabber::cancel()
-{
-    pd->cancel();
-}
-
-//RScloudgrabber* RScloudgrabber::instance = 0;
-//RScloudgrabber* RScloudgrabber::Instance ()
-//{
-//    if (instance == 0)
-//        instance = new RScloudgrabber;
-//    return instance;
-//}
-
-PointCloud<pointT>::Ptr RScloudgrabber::txt2pointcloud(std::vector<float3rgb> txtcloud) {
+PointCloud<pointT>::Ptr CloudsGrabber::txt2pointcloud(std::vector<float3rgb> txtcloud) {
 
     pcl::PointCloud<pointT>::Ptr cloud (new pcl::PointCloud<pointT>);
 
@@ -209,14 +178,12 @@ PointCloud<pointT>::Ptr RScloudgrabber::txt2pointcloud(std::vector<float3rgb> tx
     }
     return cloud;
 }
-
-std::vector<RScloud> RScloudgrabber::getPointcloudvector() const
+void CloudsGrabber::processClouds()
+{
+    for (int i=0;i<pointcloudvector.size();i++)
+        pointcloudvector[i].processCloud();
+}
+std::vector<RScloud> CloudsGrabber::getPointcloudvector() const
 {
     return pointcloudvector;
 }
-
-
-
-
-
-

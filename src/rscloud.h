@@ -37,13 +37,14 @@ private:
 
     pcl::PointCloud<pointT>::Ptr pointcloud;
     pcl::PolygonMesh polygonmesh;
-    void filter_cloud();
+
     void smooth_cloud();
     void delete_boundaries(int num_border_to_remove);
     pcl::PolygonMesh triangulate_cloud();
 
 public:
 
+    void filter_cloud();
     virtual ~RScloud() { }
     RScloud() {}
     void processCloud();

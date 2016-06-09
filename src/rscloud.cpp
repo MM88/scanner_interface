@@ -71,7 +71,7 @@ void RScloud::filter_cloud() {
     sor.setStddevMulThresh (0.2);
     sor.filter (*pointcloud);
 
-//    pcl::io::savePLYFileBinary("/home/miky/Scrivania/cloud2.ply", *pointcloud);
+    pcl::io::savePLYFileBinary("/home/miky/Scrivania/cloud2.ply", *pointcloud);
 }
 
 

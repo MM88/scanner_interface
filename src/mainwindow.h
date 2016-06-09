@@ -20,7 +20,7 @@
 #include <vtkRenderWindow.h>
 //local
 #include "calibrationdialog.h"
-#include "rscloudgrabber.h"
+#include "grabberprogressdialog.h"
 
 
 using namespace pcl;
@@ -52,7 +52,7 @@ private slots:
 private:
 
     Ui::PCLViewer *ui;
-    RScloudgrabber *rsgrabber;
+    GrabberProgressDialog *rsgrabber;
     CalibrationDialog *calibDialog;
 
 };

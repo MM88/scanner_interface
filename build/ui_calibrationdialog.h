@@ -25,8 +25,9 @@ class Ui_CalibrationDialog
 {
 public:
     QComboBox *comboBox;
-    QPushButton *pushButton;
+    QPushButton *calibButton;
     QVTKWidget *qvtkWidget;
+    QPushButton *getCloudsButton;
 
     void setupUi(QDialog *CalibrationDialog)
     {
@@ -35,13 +36,16 @@ public:
         CalibrationDialog->resize(1019, 539);
         comboBox = new QComboBox(CalibrationDialog);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(20, 50, 161, 31));
-        pushButton = new QPushButton(CalibrationDialog);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(20, 100, 161, 31));
+        comboBox->setGeometry(QRect(20, 100, 161, 31));
+        calibButton = new QPushButton(CalibrationDialog);
+        calibButton->setObjectName(QString::fromUtf8("calibButton"));
+        calibButton->setGeometry(QRect(20, 150, 161, 31));
         qvtkWidget = new QVTKWidget(CalibrationDialog);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
         qvtkWidget->setGeometry(QRect(290, 50, 701, 421));
+        getCloudsButton = new QPushButton(CalibrationDialog);
+        getCloudsButton->setObjectName(QString::fromUtf8("getCloudsButton"));
+        getCloudsButton->setGeometry(QRect(20, 50, 161, 31));
 
         retranslateUi(CalibrationDialog);
 
@@ -53,11 +57,13 @@ public:
         CalibrationDialog->setWindowTitle(QApplication::translate("CalibrationDialog", "Dialog", 0, QApplication::UnicodeUTF8));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
-         << QApplication::translate("CalibrationDialog", "1 2", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("CalibrationDialog", "1 3", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("CalibrationDialog", "1 4", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("CalibrationDialog", "coppia di camere", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("CalibrationDialog", "1-2", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("CalibrationDialog", "1-3", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("CalibrationDialog", "1-4", 0, QApplication::UnicodeUTF8)
         );
-        pushButton->setText(QApplication::translate("CalibrationDialog", "calibra", 0, QApplication::UnicodeUTF8));
+        calibButton->setText(QApplication::translate("CalibrationDialog", "calibra", 0, QApplication::UnicodeUTF8));
+        getCloudsButton->setText(QApplication::translate("CalibrationDialog", "Acquisisci nuvole", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

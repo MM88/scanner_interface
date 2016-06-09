@@ -65,11 +65,11 @@ moc_mainwindow.cxx: moc_mainwindow.cxx_parameters
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_mainwindow.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/miky/QtCreatorProjects/scanner_interface/build/moc_mainwindow.cxx_parameters
 
-moc_rscloudgrabber.cxx: /home/miky/QtCreatorProjects/scanner_interface/src/rscloudgrabber.h
-moc_rscloudgrabber.cxx: moc_rscloudgrabber.cxx_parameters
+moc_grabberprogressdialog.cxx: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.h
+moc_grabberprogressdialog.cxx: moc_grabberprogressdialog.cxx_parameters
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_rscloudgrabber.cxx"
-	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/miky/QtCreatorProjects/scanner_interface/build/moc_rscloudgrabber.cxx_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_grabberprogressdialog.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/miky/QtCreatorProjects/scanner_interface/build/moc_grabberprogressdialog.cxx_parameters
 
 moc_rscloud.cxx: /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
 moc_rscloud.cxx: moc_rscloud.cxx_parameters
@@ -83,9 +83,15 @@ moc_calibrationdialog.cxx: moc_calibrationdialog.cxx_parameters
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_calibrationdialog.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/miky/QtCreatorProjects/scanner_interface/build/moc_calibrationdialog.cxx_parameters
 
+moc_cloudsgrabber.cxx: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
+moc_cloudsgrabber.cxx: moc_cloudsgrabber.cxx_parameters
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_cloudsgrabber.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/miky/QtCreatorProjects/scanner_interface/build/moc_cloudsgrabber.cxx_parameters
+
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/main.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/main.cpp
 
@@ -108,7 +114,7 @@ CMakeFiles/pcl_visualizer.dir/main.cpp.o.provides.build: CMakeFiles/pcl_visualiz
 
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.cpp
 
@@ -129,32 +135,32 @@ CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o.provides: CMakeFiles/pcl_visualiz
 
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o.provides.build: CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/rscloudgrabber.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/rscloudgrabber.cpp
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.cpp
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/src/rscloudgrabber.cpp > CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.i
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.cpp > CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.i
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/src/rscloudgrabber.cpp -o CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.s
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.cpp -o CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.s
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.requires:
-.PHONY : CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.requires
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.requires:
+.PHONY : CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.requires
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.provides: CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.provides.build
-.PHONY : CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.provides
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.provides: CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.provides.build
+.PHONY : CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.provides
 
-CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.provides.build: CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o
+CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.provides.build: CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o
 
 CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.cpp
 
@@ -177,7 +183,7 @@ CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o.provides.build: CMakeFiles/pcl_visua
 
 CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.cpp
 
@@ -198,9 +204,32 @@ CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o.provides: CMakeFiles/pcl_v
 
 CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o.provides.build: CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o
 
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o: CMakeFiles/pcl_visualizer.dir/flags.make
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o -c /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp
+
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp > CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.i
+
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp -o CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.s
+
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.requires:
+.PHONY : CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.requires
+
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.provides: CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.provides.build
+.PHONY : CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.provides
+
+CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.provides.build: CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o
+
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: moc_mainwindow.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_mainwindow.cxx
 
@@ -221,32 +250,32 @@ CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o.provides: CMakeFiles/pcl_visu
 
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o.provides.build: CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o: moc_rscloudgrabber.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_rscloudgrabber.cxx
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: moc_grabberprogressdialog.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_grabberprogressdialog.cxx
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/build/moc_rscloudgrabber.cxx > CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.i
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/build/moc_grabberprogressdialog.cxx > CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.i
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/build/moc_rscloudgrabber.cxx -o CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.s
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/build/moc_grabberprogressdialog.cxx -o CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.s
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.requires:
-.PHONY : CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.requires
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.requires:
+.PHONY : CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.requires
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.provides: CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.requires
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.provides.build
-.PHONY : CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.provides
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.provides: CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.requires
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.provides.build
+.PHONY : CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.provides
 
-CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.provides.build: CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.provides.build: CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o
 
 CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o: moc_rscloud.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_rscloud.cxx
 
@@ -269,7 +298,7 @@ CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o.provides.build: CMakeFiles/pcl_v
 
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: moc_calibrationdialog.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_calibrationdialog.cxx
 
@@ -290,30 +319,57 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o.provides: CMakeFiles/p
 
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o.provides.build: CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
 
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o: CMakeFiles/pcl_visualizer.dir/flags.make
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o: moc_cloudsgrabber.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/moc_cloudsgrabber.cxx
+
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/miky/QtCreatorProjects/scanner_interface/build/moc_cloudsgrabber.cxx > CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.i
+
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/miky/QtCreatorProjects/scanner_interface/build/moc_cloudsgrabber.cxx -o CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.s
+
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.requires:
+.PHONY : CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.requires
+
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.provides: CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.requires
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.provides.build
+.PHONY : CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.provides
+
+CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.provides.build: CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o
+
 # Object files for target pcl_visualizer
 pcl_visualizer_OBJECTS = \
 "CMakeFiles/pcl_visualizer.dir/main.cpp.o" \
 "CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o" \
-"CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o" \
+"CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o" \
 "CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o" \
 "CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o" \
+"CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o" \
 "CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o" \
-"CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o" \
+"CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o" \
 "CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o" \
-"CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o"
+"CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o" \
+"CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o"
 
 # External object files for target pcl_visualizer
 pcl_visualizer_EXTERNAL_OBJECTS =
 
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/main.cpp.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o
-pcl_visualizer: CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o
+pcl_visualizer: CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o
+pcl_visualizer: CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o
-pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o
+pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o
+pcl_visualizer: CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o
 pcl_visualizer: CMakeFiles/pcl_visualizer.dir/build.make
 pcl_visualizer: /usr/lib/x86_64-linux-gnu/libboost_system.so
 pcl_visualizer: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -425,13 +481,15 @@ CMakeFiles/pcl_visualizer.dir/build: pcl_visualizer
 
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/main.cpp.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o.requires
-CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o.requires
+CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/rscloud.cpp.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.o.requires
+CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o.requires
-CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o.requires
+CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.o.requires
 CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o.requires
+CMakeFiles/pcl_visualizer.dir/requires: CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o.requires
 .PHONY : CMakeFiles/pcl_visualizer.dir/requires
 
 CMakeFiles/pcl_visualizer.dir/clean:
@@ -441,9 +499,10 @@ CMakeFiles/pcl_visualizer.dir/clean:
 CMakeFiles/pcl_visualizer.dir/depend: ui_mainwindow.h
 CMakeFiles/pcl_visualizer.dir/depend: ui_calibrationdialog.h
 CMakeFiles/pcl_visualizer.dir/depend: moc_mainwindow.cxx
-CMakeFiles/pcl_visualizer.dir/depend: moc_rscloudgrabber.cxx
+CMakeFiles/pcl_visualizer.dir/depend: moc_grabberprogressdialog.cxx
 CMakeFiles/pcl_visualizer.dir/depend: moc_rscloud.cxx
 CMakeFiles/pcl_visualizer.dir/depend: moc_calibrationdialog.cxx
+CMakeFiles/pcl_visualizer.dir/depend: moc_cloudsgrabber.cxx
 	cd /home/miky/QtCreatorProjects/scanner_interface/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miky/QtCreatorProjects/scanner_interface/src /home/miky/QtCreatorProjects/scanner_interface/src /home/miky/QtCreatorProjects/scanner_interface/build /home/miky/QtCreatorProjects/scanner_interface/build /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/pcl_visualizer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pcl_visualizer.dir/depend
 

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "../build/ui_mainwindow.h"
-#include "rscloudgrabber.h"
+#include "grabberprogressdialog.h"
 #include <QtMsgHandler>
 #include <QMessageBox>
 #include <QFileDialog>
@@ -65,11 +65,11 @@ void PCLViewer::on_saveButton_clicked()
 
 void PCLViewer::on_scanButton_clicked()
 {
-    rsgrabber = new RScloudgrabber;
-    rsgrabber->perform();
+    rsgrabber = new GrabberProgressDialog;
+    mesh = rsgrabber->perform()[0].getPolygonmesh();
 //    RScloudgrabber *grabber = RScloudgrabber::Instance();
 //    grabber->grab_clouds();
-    mesh = rsgrabber->getPointcloudvector()[0].getPolygonmesh();
+//    mesh = rsgrabber->getPointcloudvector()[0].getPolygonmesh();
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();

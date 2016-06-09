@@ -1,5 +1,7 @@
 # Hashes of file build rules.
 b18fce6c875785058311cb79b83468af moc_calibrationdialog.cxx
+4cedd06e57bcf62f0b11572fef4f5c0b moc_cloudsgrabber.cxx
+6dc83ce8b01ddbdcaf9bb93f29a7cd1d moc_grabberprogressdialog.cxx
 4e87b2c83d6cc20d9829b356727221b8 moc_mainwindow.cxx
 dcaf1cde11975186d43d6aeb0fe817c3 moc_pclviewer.cxx
 7fcfb80ff342d260a31d88bca608c1e9 moc_rscloud.cxx

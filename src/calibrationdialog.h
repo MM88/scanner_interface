@@ -7,6 +7,11 @@
 #include <vtkRenderWindow.h>
 #include <QDialog>
 
+#define pointT pcl::PointXYZRGB // con colori
+//#define pointTnormal pcl::PointXYZRGBNormal // con colori
+// #define pointT pcl::PointXYZ // senza colori
+ #define pointTnormal pcl::Normal // senza colori
+
 namespace Ui {
 class CalibrationDialog;
 }
@@ -26,7 +31,10 @@ protected:
 private slots:
     void on_comboBox_currentIndexChanged(const QString &arg1);
 
+    void on_getCloudsButton_clicked();
+
 private:
+
     Ui::CalibrationDialog *ui;
 };
 

@@ -68,9 +68,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "moc_mainwindow.cxx_parameters"
-  "moc_rscloudgrabber.cxx_parameters"
+  "moc_grabberprogressdialog.cxx_parameters"
   "moc_rscloud.cxx_parameters"
   "moc_calibrationdialog.cxx_parameters"
+  "moc_cloudsgrabber.cxx_parameters"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

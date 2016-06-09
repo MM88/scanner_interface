@@ -138,6 +138,54 @@ calibrationdialog.cpp.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibrationdialog.cpp.s
 .PHONY : calibrationdialog.cpp.s
 
+cloudsgrabber.o: cloudsgrabber.cpp.o
+.PHONY : cloudsgrabber.o
+
+# target to build an object file
+cloudsgrabber.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.o
+.PHONY : cloudsgrabber.cpp.o
+
+cloudsgrabber.i: cloudsgrabber.cpp.i
+.PHONY : cloudsgrabber.i
+
+# target to preprocess a source file
+cloudsgrabber.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.i
+.PHONY : cloudsgrabber.cpp.i
+
+cloudsgrabber.s: cloudsgrabber.cpp.s
+.PHONY : cloudsgrabber.s
+
+# target to generate assembly for a file
+cloudsgrabber.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/cloudsgrabber.cpp.s
+.PHONY : cloudsgrabber.cpp.s
+
+grabberprogressdialog.o: grabberprogressdialog.cpp.o
+.PHONY : grabberprogressdialog.o
+
+# target to build an object file
+grabberprogressdialog.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o
+.PHONY : grabberprogressdialog.cpp.o
+
+grabberprogressdialog.i: grabberprogressdialog.cpp.i
+.PHONY : grabberprogressdialog.i
+
+# target to preprocess a source file
+grabberprogressdialog.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.i
+.PHONY : grabberprogressdialog.cpp.i
+
+grabberprogressdialog.s: grabberprogressdialog.cpp.s
+.PHONY : grabberprogressdialog.s
+
+# target to generate assembly for a file
+grabberprogressdialog.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.s
+.PHONY : grabberprogressdialog.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -210,6 +258,54 @@ moc_calibrationdialog.cxx.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.s
 .PHONY : moc_calibrationdialog.cxx.s
 
+moc_cloudsgrabber.o: moc_cloudsgrabber.cxx.o
+.PHONY : moc_cloudsgrabber.o
+
+# target to build an object file
+moc_cloudsgrabber.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o
+.PHONY : moc_cloudsgrabber.cxx.o
+
+moc_cloudsgrabber.i: moc_cloudsgrabber.cxx.i
+.PHONY : moc_cloudsgrabber.i
+
+# target to preprocess a source file
+moc_cloudsgrabber.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.i
+.PHONY : moc_cloudsgrabber.cxx.i
+
+moc_cloudsgrabber.s: moc_cloudsgrabber.cxx.s
+.PHONY : moc_cloudsgrabber.s
+
+# target to generate assembly for a file
+moc_cloudsgrabber.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.s
+.PHONY : moc_cloudsgrabber.cxx.s
+
+moc_grabberprogressdialog.o: moc_grabberprogressdialog.cxx.o
+.PHONY : moc_grabberprogressdialog.o
+
+# target to build an object file
+moc_grabberprogressdialog.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o
+.PHONY : moc_grabberprogressdialog.cxx.o
+
+moc_grabberprogressdialog.i: moc_grabberprogressdialog.cxx.i
+.PHONY : moc_grabberprogressdialog.i
+
+# target to preprocess a source file
+moc_grabberprogressdialog.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.i
+.PHONY : moc_grabberprogressdialog.cxx.i
+
+moc_grabberprogressdialog.s: moc_grabberprogressdialog.cxx.s
+.PHONY : moc_grabberprogressdialog.s
+
+# target to generate assembly for a file
+moc_grabberprogressdialog.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.s
+.PHONY : moc_grabberprogressdialog.cxx.s
+
 moc_mainwindow.o: moc_mainwindow.cxx.o
 .PHONY : moc_mainwindow.o
 
@@ -258,30 +354,6 @@ moc_rscloud.cxx.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_rscloud.cxx.s
 .PHONY : moc_rscloud.cxx.s
 
-moc_rscloudgrabber.o: moc_rscloudgrabber.cxx.o
-.PHONY : moc_rscloudgrabber.o
-
-# target to build an object file
-moc_rscloudgrabber.cxx.o:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.o
-.PHONY : moc_rscloudgrabber.cxx.o
-
-moc_rscloudgrabber.i: moc_rscloudgrabber.cxx.i
-.PHONY : moc_rscloudgrabber.i
-
-# target to preprocess a source file
-moc_rscloudgrabber.cxx.i:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.i
-.PHONY : moc_rscloudgrabber.cxx.i
-
-moc_rscloudgrabber.s: moc_rscloudgrabber.cxx.s
-.PHONY : moc_rscloudgrabber.s
-
-# target to generate assembly for a file
-moc_rscloudgrabber.cxx.s:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/moc_rscloudgrabber.cxx.s
-.PHONY : moc_rscloudgrabber.cxx.s
-
 rscloud.o: rscloud.cpp.o
 .PHONY : rscloud.o
 
@@ -306,30 +378,6 @@ rscloud.cpp.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/rscloud.cpp.s
 .PHONY : rscloud.cpp.s
 
-rscloudgrabber.o: rscloudgrabber.cpp.o
-.PHONY : rscloudgrabber.o
-
-# target to build an object file
-rscloudgrabber.cpp.o:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.o
-.PHONY : rscloudgrabber.cpp.o
-
-rscloudgrabber.i: rscloudgrabber.cpp.i
-.PHONY : rscloudgrabber.i
-
-# target to preprocess a source file
-rscloudgrabber.cpp.i:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.i
-.PHONY : rscloudgrabber.cpp.i
-
-rscloudgrabber.s: rscloudgrabber.cpp.s
-.PHONY : rscloudgrabber.s
-
-# target to generate assembly for a file
-rscloudgrabber.cpp.s:
-	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/rscloudgrabber.cpp.s
-.PHONY : rscloudgrabber.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -342,6 +390,12 @@ help:
 	@echo "... calibrationdialog.o"
 	@echo "... calibrationdialog.i"
 	@echo "... calibrationdialog.s"
+	@echo "... cloudsgrabber.o"
+	@echo "... cloudsgrabber.i"
+	@echo "... cloudsgrabber.s"
+	@echo "... grabberprogressdialog.o"
+	@echo "... grabberprogressdialog.i"
+	@echo "... grabberprogressdialog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -351,21 +405,21 @@ help:
 	@echo "... moc_calibrationdialog.o"
 	@echo "... moc_calibrationdialog.i"
 	@echo "... moc_calibrationdialog.s"
+	@echo "... moc_cloudsgrabber.o"
+	@echo "... moc_cloudsgrabber.i"
+	@echo "... moc_cloudsgrabber.s"
+	@echo "... moc_grabberprogressdialog.o"
+	@echo "... moc_grabberprogressdialog.i"
+	@echo "... moc_grabberprogressdialog.s"
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"
 	@echo "... moc_rscloud.o"
 	@echo "... moc_rscloud.i"
 	@echo "... moc_rscloud.s"
-	@echo "... moc_rscloudgrabber.o"
-	@echo "... moc_rscloudgrabber.i"
-	@echo "... moc_rscloudgrabber.s"
 	@echo "... rscloud.o"
 	@echo "... rscloud.i"
 	@echo "... rscloud.s"
-	@echo "... rscloudgrabber.o"
-	@echo "... rscloudgrabber.i"
-	@echo "... rscloudgrabber.s"
 .PHONY : help
 
 
