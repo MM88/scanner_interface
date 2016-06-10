@@ -25,7 +25,7 @@ class CalibrationDialog : public QDialog
 public:
     explicit CalibrationDialog(QWidget *parent = 0);
     ~CalibrationDialog();
-     CloudsGrabber *grabber;
+
 
 protected:
     boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
@@ -37,9 +37,13 @@ private slots:
 
     void on_getCloudsButton_clicked();
 
+    void double_visualzer(std::string sourceCloudName,std::string targetCloudName);
 private:
 
     Ui::CalibrationDialog *ui;
+    CloudsGrabber *grabber;
+    std::string sourceCloudName;
+    std::string targetCloudName;
 };
 
 #endif // CALIBRATIONDIALOG_H

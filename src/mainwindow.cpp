@@ -17,10 +17,7 @@ PCLViewer::PCLViewer (QWidget *parent) :
   ui->setupUi (this);
   this->setWindowTitle ("PCL viewer");
 
-//  // Setup the cloud pointer
-//  cloud.reset (new PointCloud<PointXYZ>);
-
-//  // Set up the QVTK window
+  // Set up the QVTK window
   viewer.reset (new pcl::visualization::PCLVisualizer ("viewer", false));
   ui->qvtkWidget->SetRenderWindow (viewer->getRenderWindow ());
   viewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());

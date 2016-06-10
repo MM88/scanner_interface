@@ -85,6 +85,8 @@ stdio.h
 -
 pcl/point_types.h
 -
+pcl/io/ply_io.h
+-
 
 /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
 pcl/point_cloud.h
