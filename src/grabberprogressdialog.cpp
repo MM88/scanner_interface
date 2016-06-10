@@ -36,7 +36,6 @@ std::vector<RScloud> GrabberProgressDialog::perform()
     boost::this_thread::sleep (boost::posix_time::seconds (1));
 
     std::vector<RScloud> pointcloudvector =  grabber->getPointcloudvector();
-    delete grabber;
 
     steps = 0;
     return pointcloudvector;

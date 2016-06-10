@@ -9,6 +9,7 @@
 #include <QHBoxLayout>
 #include <pcl/io/ply_io.h>
 
+
 PCLViewer::PCLViewer (QWidget *parent) :
   QMainWindow (parent),
   ui (new Ui::PCLViewer)
@@ -24,11 +25,11 @@ PCLViewer::PCLViewer (QWidget *parent) :
   ui->qvtkWidget->SetRenderWindow (viewer->getRenderWindow ());
   viewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
   viewer->setBackgroundColor(158,158,158);
+  pcl::PolygonMesh::Ptr emptyMesh (new pcl::PolygonMesh);
+  viewer->addPolygonMesh(*emptyMesh,"cloud",0);
   ui->qvtkWidget->update ();
   ui->saveButton->setVisible(false);
-  // Connect "scan" button and the function
-//  connect (ui->scanButton,  SIGNAL (clicked ()), this, SLOT (on_scanButton_clicked ()));
-//  connect (ui->saveButton,  SIGNAL (clicked ()), this, SLOT (on_saveButton_clicked ()));
+
 }
 
 PCLViewer::~PCLViewer ()
@@ -67,12 +68,10 @@ void PCLViewer::on_scanButton_clicked()
 {
     rsgrabber = new GrabberProgressDialog;
     mesh = rsgrabber->perform()[0].getPolygonmesh();
-
-//    mesh = rsgrabber->getPointcloudvector()[0].getPolygonmesh();
+    viewer->removePolygonMesh("cloud",0);
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();
-
     ui->saveButton->setVisible(true);
     ui->scanButton->update();
 }

@@ -46,7 +46,6 @@ void CalibrationDialog::on_comboBox_currentIndexChanged(const QString &arg1)
 
 void CalibrationDialog::on_getCloudsButton_clicked()
 {
-
     pointcloudvector.clear();
     grabber->grabClouds();   
     pointcloudvector = grabber->getPointcloudvector();
@@ -54,4 +53,6 @@ void CalibrationDialog::on_getCloudsButton_clicked()
     doubleViewer->updatePointCloud (pointcloudvector[0].getPointcloud(), "cloud");
     doubleViewer->resetCamera ();
     ui->qvtkWidget->update ();
+    ui->getCloudsButton->update();
+
 }
