@@ -8,7 +8,6 @@
 #include <QString>
 #include <QHBoxLayout>
 #include <pcl/io/ply_io.h>
-#include "calibrationdialog.h"
 
 PCLViewer::PCLViewer (QWidget *parent) :
   QMainWindow (parent),
@@ -24,6 +23,7 @@ PCLViewer::PCLViewer (QWidget *parent) :
   viewer.reset (new pcl::visualization::PCLVisualizer ("viewer", false));
   ui->qvtkWidget->SetRenderWindow (viewer->getRenderWindow ());
   viewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
+  viewer->setBackgroundColor(158,158,158);
   ui->qvtkWidget->update ();
   ui->saveButton->setVisible(false);
   // Connect "scan" button and the function

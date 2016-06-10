@@ -2238,6 +2238,7 @@ CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o: /usr/local/include/pc
 CMakeFiles/pcl_visualizer.dir/grabberprogressdialog.cpp.o: /usr/local/include/pcl-1.8/pcl/visualization/point_picking_event.h
 
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.h
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/main.cpp
 CMakeFiles/pcl_visualizer.dir/main.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.h
@@ -2981,6 +2982,7 @@ CMakeFiles/pcl_visualizer.dir/main.cpp.o: /usr/local/include/pcl-1.8/pcl/visuali
 
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: ui_mainwindow.h
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.h
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.cpp
 CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.h
@@ -3761,6 +3763,7 @@ CMakeFiles/pcl_visualizer.dir/mainwindow.cpp.o: /usr/local/include/pcl-1.8/pcl/v
 
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: moc_calibrationdialog.cxx
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /usr/include/eigen3/Eigen/Cholesky
 CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /usr/include/eigen3/Eigen/Core
@@ -4453,6 +4456,7 @@ CMakeFiles/pcl_visualizer.dir/moc_calibrationdialog.cxx.o: /usr/local/include/pc
 CMakeFiles/pcl_visualizer.dir/moc_cloudsgrabber.cxx.o: moc_cloudsgrabber.cxx
 
 CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: moc_grabberprogressdialog.cxx
+CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.h
 CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
 CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: /usr/include/eigen3/Eigen/Cholesky
@@ -5148,6 +5152,7 @@ CMakeFiles/pcl_visualizer.dir/moc_grabberprogressdialog.cxx.o: /usr/local/includ
 
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: moc_mainwindow.cxx
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
+CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/grabberprogressdialog.h
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.h
 CMakeFiles/pcl_visualizer.dir/moc_mainwindow.cxx.o: /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h

@@ -21,9 +21,9 @@ CloudsGrabber* CloudsGrabber::Instance ()
 
 void CloudsGrabber::grabClouds()
 {
-
+    pointcloudvector.clear();
     //... perform one percent of the operation
-
+    cout<<"ci sno"<<endl;
     // Turn on logging. We can separately enable logging to console or to file, and use different severity filters for each.
     rs::log_to_console(rs::log_severity::warn);
     //rs::log_to_file(rs::log_severity::debug, "librealsense.log");

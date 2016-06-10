@@ -83,6 +83,8 @@ opencv2/highgui.hpp
 -
 stdio.h
 -
+pcl/point_types.h
+-
 
 /home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
 pcl/point_cloud.h
@@ -97,6 +99,8 @@ QDialog
 -
 rscloud.h
 /home/miky/QtCreatorProjects/scanner_interface/src/rscloud.h
+cloudsgrabber.h
+/home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 
 /home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.cpp
 librealsense/rs.hpp
@@ -163,6 +167,8 @@ QProgressDialog
 -
 QTimer
 -
+cloudsgrabber.h
+/home/miky/QtCreatorProjects/scanner_interface/src/cloudsgrabber.h
 
 /home/miky/QtCreatorProjects/scanner_interface/src/main.cpp
 mainwindow.h
@@ -193,8 +199,6 @@ QHBoxLayout
 -
 pcl/io/ply_io.h
 -
-calibrationdialog.h
-/home/miky/QtCreatorProjects/scanner_interface/src/calibrationdialog.h
 
 /home/miky/QtCreatorProjects/scanner_interface/src/mainwindow.h
 iostream

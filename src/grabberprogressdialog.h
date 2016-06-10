@@ -9,6 +9,7 @@
 #include <QObject>
 #include <QProgressDialog>
 #include <QTimer>
+#include "cloudsgrabber.h"
 
 using namespace std;
 using namespace pcl;
@@ -26,6 +27,7 @@ public slots:
 
 private:
     QProgressDialog *pd;
+    CloudsGrabber *grabber;
 
 public:
 

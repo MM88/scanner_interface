@@ -8,6 +8,7 @@
 GrabberProgressDialog::GrabberProgressDialog(QObject *parent) :
     QObject(parent)
 {
+    grabber = CloudsGrabber::Instance();
     pd = new QProgressDialog();
     pd = new QProgressDialog("Elaborazione in corso", "Annulla", 0, 3);
     pd->setWindowModality(Qt::WindowModal);
@@ -20,7 +21,6 @@ std::vector<RScloud> GrabberProgressDialog::perform()
     steps = 1;
     pd->setValue(steps);
 
-    CloudsGrabber *grabber = CloudsGrabber::Instance();
     grabber->grabClouds();
 
     boost::this_thread::sleep (boost::posix_time::seconds (1));

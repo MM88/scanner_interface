@@ -7,6 +7,8 @@
 #include <vtkRenderWindow.h>
 #include <QDialog>
 #include "rscloud.h"
+#include "cloudsgrabber.h"
+
 #define pointT pcl::PointXYZRGB // con colori
 //#define pointTnormal pcl::PointXYZRGBNormal // con colori
 // #define pointT pcl::PointXYZ // senza colori
@@ -23,6 +25,7 @@ class CalibrationDialog : public QDialog
 public:
     explicit CalibrationDialog(QWidget *parent = 0);
     ~CalibrationDialog();
+     CloudsGrabber *grabber;
 
 protected:
     boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
