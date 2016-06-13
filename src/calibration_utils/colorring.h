@@ -4,6 +4,7 @@
 #include <cstddef>
 #include<string>
 #include <pcl/point_types.h>
+
 using namespace pcl;
 
 #define pointT pcl::PointXYZRGB // con colori
@@ -50,6 +51,5 @@ public:
     void restart();
 
 };
-//ColorRing color_left;
-//ColorRing color_right;
+
 #endif

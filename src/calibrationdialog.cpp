@@ -27,14 +27,22 @@ CalibrationDialog::CalibrationDialog(QWidget *parent) :
     ui->setupUi(this);
     grabber = CloudsGrabber::Instance();
     doubleViewer.reset (new pcl::visualization::PCLVisualizer ("calibration viewer", false));
-
-
-
     ui->qvtkWidget->SetRenderWindow (doubleViewer->getRenderWindow ());
     doubleViewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
-//    doubleViewer->setBackgroundColor(0.3, 0.3, 0.3);
-//    pcl::PointCloud<pointT>::Ptr emptyCloud (new pcl::PointCloud<pointT>);
-//    doubleViewer->addPointCloud (emptyCloud, "cloud",0);
+
+    doubleViewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
+    doubleViewer->setCameraPosition(0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 1.0, 0.0, v1);
+    doubleViewer->setBackgroundColor(0.2, 0.2, 0.2, v1);
+    pcl::PointCloud<pointT>::Ptr emptyCloud1 (new pcl::PointCloud<pointT>);
+    doubleViewer->addPointCloud (emptyCloud1, "1",v1);
+
+    doubleViewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2);
+    doubleViewer->setCameraPosition(0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD, 0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD + 0.15, 0.0, 1.0, 0.0, v2);
+    doubleViewer->setBackgroundColor(0.3, 0.3, 0.3, v2);
+    pcl::PointCloud<pointT>::Ptr emptyCloud2 (new pcl::PointCloud<pointT>);
+    doubleViewer->addPointCloud (emptyCloud2, "2",v2);
+    doubleViewer->createViewPortCamera(v2);
+
     ui->qvtkWidget->update ();
 }
 
@@ -131,7 +139,8 @@ void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::Point
     cout << "cloud " << (isSecondCloud ? "destra." : "sinistra.") << endl;
 
     // coloro il punto
-    current_point = (isSecondCloud ? color_right : color_left).colorize(current_point);
+    current_point = (isSecondCloud ? color_right : color_left).colorize(current_point); pcl::PointCloud<pointT>::Ptr emptyCloud1 (new pcl::PointCloud<pointT>);
+    doubleViewer->addPointCloud (emptyCloud1, "1",v1);
     // lo aggiungo alla nuovola dei selezionati
     (isSecondCloud ? clicked_points2 : clicked_points)->points.push_back(current_point);
     updateClickedPoints();
@@ -142,7 +151,7 @@ void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::Point
     (isSecondCloud ? color_right : color_left).nextColor();
 }
 // visualizzazione doppia
-void CalibrationDialog::double_visualization( string name1, string name2) {
+void CalibrationDialog::doubleVisualization( string name1, string name2) {
 
     std::stringstream firstCloud;
     firstCloud<<"./cloud_registrazione/cloud"<<name1<<".ply";
@@ -171,25 +180,16 @@ void CalibrationDialog::double_visualization( string name1, string name2) {
     clicked_points = clicked_points2_app;
     clicked_points2 = clicked_points2_app;
 
-    // creo la finestra
-//    boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));
-//    doubleViewer = viewer;
-//        viewer->initCameraParameters();
-//        viewer->setSize(1200, 650);
-
-
     // assegno la prima cloud
-    doubleViewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
-    doubleViewer->setCameraPosition(0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 1.0, 0.0, v1);
-    doubleViewer->setBackgroundColor(0.2, 0.2, 0.2, v1); // background grigio
+
     doubleViewer->addText("Prossimo colore: " + color_left.getColorName(), 10, 10, "v1_text", v1);
     pcl::visualization::PointCloudColorHandlerRGBField<pointT> rgb(cloud1);
-    doubleViewer->addPointCloud<pointT>(cloud1, rgb, name1, v1);
-    doubleViewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, name1);
+    doubleViewer->addPointCloud<pointT>(cloud1, rgb, "1", v1);
+    doubleViewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "1");
+    doubleViewer->setCameraPosition(0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 1.0, 0.0, v1);
 
     // assegno la seconda cloud
-    doubleViewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2);
-    doubleViewer->setBackgroundColor(0.3, 0.3, 0.3, v2);
+
     doubleViewer->addText("Prossimo colore: " + color_right.getColorName(), 10, 10, "v2_text", v2);
     pcl::visualization::PointCloudColorHandlerRGBField<pointT> rgb2(cloud2);
     // la traslo per poter identificare i suoi punti
@@ -198,15 +198,13 @@ void CalibrationDialog::double_visualization( string name1, string name2) {
     //cout << "matrice applicata alla seconda cloud" << endl << transform.matrix() << endl;
     pcl::PointCloud<pointT>::Ptr transformed_cloud2(new pcl::PointCloud<pointT>);
     pcl::transformPointCloud(*cloud2, *transformed_cloud2, transform);
-    doubleViewer->addPointCloud<pointT>(transformed_cloud2, rgb2, name2, v2);
-    doubleViewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, name2);
+    doubleViewer->addPointCloud<pointT>(transformed_cloud2, rgb2, "2", v2);
+    doubleViewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "2");
 
-    // gestione separata della telecamera
-    doubleViewer->createViewPortCamera(v2);
     doubleViewer->setCameraPosition(0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD, 0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD + 0.15, 0.0, 1.0, 0.0, v2);
 
-//    doubleViewer->registerKeyboardCallback(keyboardEventOccurred, (void*)&doubleViewer);
-//    doubleViewer->registerPointPickingCallback(pointPickDoubleViewEvent, (void*)&doubleViewer);
+    doubleViewer->registerKeyboardCallback(keyboardEventOccurred, (void*)&doubleViewer);
+    doubleViewer->registerPointPickingCallback(pointPickDoubleViewEvent, (void*)&doubleViewer);
 
     while (!doubleViewer->wasStopped()) {
         doubleViewer->spinOnce(100);
@@ -249,8 +247,7 @@ void CalibrationDialog::double_visualization( string name1, string name2) {
 
 void CalibrationDialog::on_calibButton_clicked()
 {
-//    double_visualzer(sourceCloudName,targetCloudName);
-//    VisualizationUtils doublevis;
-     double_visualization(sourceCloudName,targetCloudName);
-//    doubleViewer = doublevis.getGlobal_viewer();
+    doubleViewer->removePointCloud("1",v1);
+    doubleViewer->removePointCloud("2",v2);
+    doubleVisualization(sourceCloudName,targetCloudName);
 }

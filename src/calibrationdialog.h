@@ -29,13 +29,14 @@ class CalibrationDialog : public QDialog
     Q_OBJECT
 
 public:
+
     explicit CalibrationDialog(QWidget *parent = 0);
     ~CalibrationDialog();
 //    void loop_view(boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer) ;
     void updateClickedPoints();
     void keyboardEventOccurred(const pcl::visualization::KeyboardEvent &event, void* args);
     void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
-    void double_visualization(std::string name1, std::string name2);
+    void doubleVisualization(std::string name1, std::string name2);
 
 
 protected:
@@ -48,7 +49,6 @@ private slots:
 
     void on_getCloudsButton_clicked();
 
-    void double_visualzer(std::string sourceCloudName,std::string targetCloudName);
     void on_calibButton_clicked();
 
 private:
@@ -63,7 +63,7 @@ private:
     pointCatched points_left;
     pointCatched points_right;
 
-    //unsigned int click_id = 1; // per il mouse event
+//    unsigned int click_id = 1; // per il mouse event
 
     // non riesco a recuperare la view dalle varie callback, così me la salvo globale e ciao
 //    boost::shared_ptr<pcl::visualization::PCLVisualizer> global_viewer;

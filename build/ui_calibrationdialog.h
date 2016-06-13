@@ -28,6 +28,7 @@ public:
     QPushButton *calibButton;
     QVTKWidget *qvtkWidget;
     QPushButton *getCloudsButton;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *CalibrationDialog)
     {
@@ -46,6 +47,9 @@ public:
         getCloudsButton = new QPushButton(CalibrationDialog);
         getCloudsButton->setObjectName(QString::fromUtf8("getCloudsButton"));
         getCloudsButton->setGeometry(QRect(20, 50, 161, 31));
+        pushButton = new QPushButton(CalibrationDialog);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(20, 200, 161, 31));
 
         retranslateUi(CalibrationDialog);
 
@@ -64,6 +68,7 @@ public:
         );
         calibButton->setText(QApplication::translate("CalibrationDialog", "calibra", 0, QApplication::UnicodeUTF8));
         getCloudsButton->setText(QApplication::translate("CalibrationDialog", "Acquisisci nuvole", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("CalibrationDialog", "salva matrice", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
