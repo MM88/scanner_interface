@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>966</width>
-    <height>518</height>
+    <width>857</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -29,10 +29,10 @@
    <widget class="QVTKWidget" name="qvtkWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>10</y>
-      <width>640</width>
-      <height>480</height>
+      <x>20</x>
+      <y>120</y>
+      <width>821</width>
+      <height>471</height>
      </rect>
     </property>
    </widget>
@@ -40,9 +40,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>20</y>
-      <width>171</width>
-      <height>61</height>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -52,10 +52,10 @@
    <widget class="QPushButton" name="saveButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>200</y>
-      <width>99</width>
-      <height>27</height>
+      <x>670</x>
+      <y>30</y>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -65,14 +65,24 @@
    <widget class="QPushButton" name="calibButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>90</y>
-      <width>171</width>
-      <height>51</height>
+      <x>210</x>
+      <y>30</y>
+      <width>161</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>Calibrazione</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="savePath">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
     </property>
    </widget>
   </widget>

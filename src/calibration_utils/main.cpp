@@ -31,7 +31,7 @@
 
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "visualization_utils.h"
+#include "visualizationutils.cpp"
 
 using namespace std;
 

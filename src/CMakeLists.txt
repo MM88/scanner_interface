@@ -14,8 +14,8 @@ add_definitions     (${PCL_DEFINITIONS})
 
 include_directories(${PCL_INCLUDE_DIRS}) 
 include_directories(${PROJECT_SOURCE_DIR}) 
-set  (project_SOURCES main.cpp mainwindow.cpp grabberprogressdialog.cpp rscloud.cpp calibrationdialog.cpp cloudsgrabber.cpp)
-set  (project_HEADERS mainwindow.h grabberprogressdialog.h rscloud.h calibrationdialog.h cloudsgrabber.h)
+set  (project_SOURCES main.cpp mainwindow.cpp grabberprogressdialog.cpp rscloud.cpp calibrationdialog.cpp cloudsgrabber.cpp calibration_utils/colorring.cpp calibration_utils/pointcatched.cpp calibration_utils/transformationutils.cpp )
+set  (project_HEADERS mainwindow.h grabberprogressdialog.h rscloud.h calibrationdialog.h cloudsgrabber.h  calibration_utils/colorring.h calibration_utils/pointcatched.h calibration_utils/transformationutils.h )
 set  (project_FORMS   mainwindow.ui calibrationdialog.ui)
 set  (VTK_LIBRARIES   vtkRendering vtkGraphics vtkHybrid QVTK)
 

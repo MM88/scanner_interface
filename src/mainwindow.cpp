@@ -21,11 +21,11 @@ PCLViewer::PCLViewer (QWidget *parent) :
   viewer.reset (new pcl::visualization::PCLVisualizer ("viewer", false));
   ui->qvtkWidget->SetRenderWindow (viewer->getRenderWindow ());
   viewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
-  viewer->setBackgroundColor(158,158,158);
+  viewer->setBackgroundColor(0.4, 0.4, 0.4);
   pcl::PolygonMesh::Ptr emptyMesh (new pcl::PolygonMesh);
   viewer->addPolygonMesh(*emptyMesh,"cloud",0);
   ui->qvtkWidget->update ();
-  ui->saveButton->setVisible(false);
+  ui->saveButton->setEnabled(false);
 
 }
 
@@ -69,7 +69,7 @@ void PCLViewer::on_scanButton_clicked()
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();
-    ui->saveButton->setVisible(true);
+    ui->saveButton->setEnabled(true);
     ui->scanButton->update();
 }
 

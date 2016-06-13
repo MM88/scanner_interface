@@ -114,6 +114,150 @@ pcl_visualizer/fast:
 	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/build
 .PHONY : pcl_visualizer/fast
 
+calibration_utils/colorring.o: calibration_utils/colorring.cpp.o
+.PHONY : calibration_utils/colorring.o
+
+# target to build an object file
+calibration_utils/colorring.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/colorring.cpp.o
+.PHONY : calibration_utils/colorring.cpp.o
+
+calibration_utils/colorring.i: calibration_utils/colorring.cpp.i
+.PHONY : calibration_utils/colorring.i
+
+# target to preprocess a source file
+calibration_utils/colorring.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/colorring.cpp.i
+.PHONY : calibration_utils/colorring.cpp.i
+
+calibration_utils/colorring.s: calibration_utils/colorring.cpp.s
+.PHONY : calibration_utils/colorring.s
+
+# target to generate assembly for a file
+calibration_utils/colorring.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/colorring.cpp.s
+.PHONY : calibration_utils/colorring.cpp.s
+
+calibration_utils/moc_colorring.o: calibration_utils/moc_colorring.cxx.o
+.PHONY : calibration_utils/moc_colorring.o
+
+# target to build an object file
+calibration_utils/moc_colorring.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_colorring.cxx.o
+.PHONY : calibration_utils/moc_colorring.cxx.o
+
+calibration_utils/moc_colorring.i: calibration_utils/moc_colorring.cxx.i
+.PHONY : calibration_utils/moc_colorring.i
+
+# target to preprocess a source file
+calibration_utils/moc_colorring.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_colorring.cxx.i
+.PHONY : calibration_utils/moc_colorring.cxx.i
+
+calibration_utils/moc_colorring.s: calibration_utils/moc_colorring.cxx.s
+.PHONY : calibration_utils/moc_colorring.s
+
+# target to generate assembly for a file
+calibration_utils/moc_colorring.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_colorring.cxx.s
+.PHONY : calibration_utils/moc_colorring.cxx.s
+
+calibration_utils/moc_pointcatched.o: calibration_utils/moc_pointcatched.cxx.o
+.PHONY : calibration_utils/moc_pointcatched.o
+
+# target to build an object file
+calibration_utils/moc_pointcatched.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_pointcatched.cxx.o
+.PHONY : calibration_utils/moc_pointcatched.cxx.o
+
+calibration_utils/moc_pointcatched.i: calibration_utils/moc_pointcatched.cxx.i
+.PHONY : calibration_utils/moc_pointcatched.i
+
+# target to preprocess a source file
+calibration_utils/moc_pointcatched.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_pointcatched.cxx.i
+.PHONY : calibration_utils/moc_pointcatched.cxx.i
+
+calibration_utils/moc_pointcatched.s: calibration_utils/moc_pointcatched.cxx.s
+.PHONY : calibration_utils/moc_pointcatched.s
+
+# target to generate assembly for a file
+calibration_utils/moc_pointcatched.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_pointcatched.cxx.s
+.PHONY : calibration_utils/moc_pointcatched.cxx.s
+
+calibration_utils/moc_transformationutils.o: calibration_utils/moc_transformationutils.cxx.o
+.PHONY : calibration_utils/moc_transformationutils.o
+
+# target to build an object file
+calibration_utils/moc_transformationutils.cxx.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_transformationutils.cxx.o
+.PHONY : calibration_utils/moc_transformationutils.cxx.o
+
+calibration_utils/moc_transformationutils.i: calibration_utils/moc_transformationutils.cxx.i
+.PHONY : calibration_utils/moc_transformationutils.i
+
+# target to preprocess a source file
+calibration_utils/moc_transformationutils.cxx.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_transformationutils.cxx.i
+.PHONY : calibration_utils/moc_transformationutils.cxx.i
+
+calibration_utils/moc_transformationutils.s: calibration_utils/moc_transformationutils.cxx.s
+.PHONY : calibration_utils/moc_transformationutils.s
+
+# target to generate assembly for a file
+calibration_utils/moc_transformationutils.cxx.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/moc_transformationutils.cxx.s
+.PHONY : calibration_utils/moc_transformationutils.cxx.s
+
+calibration_utils/pointcatched.o: calibration_utils/pointcatched.cpp.o
+.PHONY : calibration_utils/pointcatched.o
+
+# target to build an object file
+calibration_utils/pointcatched.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/pointcatched.cpp.o
+.PHONY : calibration_utils/pointcatched.cpp.o
+
+calibration_utils/pointcatched.i: calibration_utils/pointcatched.cpp.i
+.PHONY : calibration_utils/pointcatched.i
+
+# target to preprocess a source file
+calibration_utils/pointcatched.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/pointcatched.cpp.i
+.PHONY : calibration_utils/pointcatched.cpp.i
+
+calibration_utils/pointcatched.s: calibration_utils/pointcatched.cpp.s
+.PHONY : calibration_utils/pointcatched.s
+
+# target to generate assembly for a file
+calibration_utils/pointcatched.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/pointcatched.cpp.s
+.PHONY : calibration_utils/pointcatched.cpp.s
+
+calibration_utils/transformationutils.o: calibration_utils/transformationutils.cpp.o
+.PHONY : calibration_utils/transformationutils.o
+
+# target to build an object file
+calibration_utils/transformationutils.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/transformationutils.cpp.o
+.PHONY : calibration_utils/transformationutils.cpp.o
+
+calibration_utils/transformationutils.i: calibration_utils/transformationutils.cpp.i
+.PHONY : calibration_utils/transformationutils.i
+
+# target to preprocess a source file
+calibration_utils/transformationutils.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/transformationutils.cpp.i
+.PHONY : calibration_utils/transformationutils.cpp.i
+
+calibration_utils/transformationutils.s: calibration_utils/transformationutils.cpp.s
+.PHONY : calibration_utils/transformationutils.s
+
+# target to generate assembly for a file
+calibration_utils/transformationutils.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_visualizer.dir/build.make CMakeFiles/pcl_visualizer.dir/calibration_utils/transformationutils.cpp.s
+.PHONY : calibration_utils/transformationutils.cpp.s
+
 calibrationdialog.o: calibrationdialog.cpp.o
 .PHONY : calibrationdialog.o
 
@@ -387,6 +531,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pcl_visualizer"
+	@echo "... calibration_utils/colorring.o"
+	@echo "... calibration_utils/colorring.i"
+	@echo "... calibration_utils/colorring.s"
+	@echo "... calibration_utils/moc_colorring.o"
+	@echo "... calibration_utils/moc_colorring.i"
+	@echo "... calibration_utils/moc_colorring.s"
+	@echo "... calibration_utils/moc_pointcatched.o"
+	@echo "... calibration_utils/moc_pointcatched.i"
+	@echo "... calibration_utils/moc_pointcatched.s"
+	@echo "... calibration_utils/moc_transformationutils.o"
+	@echo "... calibration_utils/moc_transformationutils.i"
+	@echo "... calibration_utils/moc_transformationutils.s"
+	@echo "... calibration_utils/pointcatched.o"
+	@echo "... calibration_utils/pointcatched.i"
+	@echo "... calibration_utils/pointcatched.s"
+	@echo "... calibration_utils/transformationutils.o"
+	@echo "... calibration_utils/transformationutils.i"
+	@echo "... calibration_utils/transformationutils.s"
 	@echo "... calibrationdialog.o"
 	@echo "... calibrationdialog.i"
 	@echo "... calibrationdialog.s"

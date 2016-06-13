@@ -33,7 +33,7 @@ public:
     {
         if (CalibrationDialog->objectName().isEmpty())
             CalibrationDialog->setObjectName(QString::fromUtf8("CalibrationDialog"));
-        CalibrationDialog->resize(1019, 539);
+        CalibrationDialog->resize(1133, 597);
         comboBox = new QComboBox(CalibrationDialog);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(20, 100, 161, 31));
@@ -42,7 +42,7 @@ public:
         calibButton->setGeometry(QRect(20, 150, 161, 31));
         qvtkWidget = new QVTKWidget(CalibrationDialog);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
-        qvtkWidget->setGeometry(QRect(290, 50, 701, 421));
+        qvtkWidget->setGeometry(QRect(230, 20, 881, 551));
         getCloudsButton = new QPushButton(CalibrationDialog);
         getCloudsButton->setObjectName(QString::fromUtf8("getCloudsButton"));
         getCloudsButton->setGeometry(QRect(20, 50, 161, 31));

@@ -14,6 +14,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHeaderView>
+#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
 #include <QtGui/QWidget>
@@ -29,28 +30,32 @@ public:
     QPushButton *scanButton;
     QPushButton *saveButton;
     QPushButton *calibButton;
+    QLineEdit *savePath;
 
     void setupUi(QMainWindow *PCLViewer)
     {
         if (PCLViewer->objectName().isEmpty())
             PCLViewer->setObjectName(QString::fromUtf8("PCLViewer"));
-        PCLViewer->resize(966, 518);
+        PCLViewer->resize(857, 606);
         PCLViewer->setMinimumSize(QSize(0, 0));
         PCLViewer->setMaximumSize(QSize(5000, 5000));
         centralwidget = new QWidget(PCLViewer);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         qvtkWidget = new QVTKWidget(centralwidget);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
-        qvtkWidget->setGeometry(QRect(300, 10, 640, 480));
+        qvtkWidget->setGeometry(QRect(20, 120, 821, 471));
         scanButton = new QPushButton(centralwidget);
         scanButton->setObjectName(QString::fromUtf8("scanButton"));
-        scanButton->setGeometry(QRect(30, 20, 171, 61));
+        scanButton->setGeometry(QRect(30, 30, 151, 31));
         saveButton = new QPushButton(centralwidget);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
-        saveButton->setGeometry(QRect(40, 200, 99, 27));
+        saveButton->setGeometry(QRect(670, 30, 121, 31));
         calibButton = new QPushButton(centralwidget);
         calibButton->setObjectName(QString::fromUtf8("calibButton"));
-        calibButton->setGeometry(QRect(30, 90, 171, 51));
+        calibButton->setGeometry(QRect(210, 30, 161, 31));
+        savePath = new QLineEdit(centralwidget);
+        savePath->setObjectName(QString::fromUtf8("savePath"));
+        savePath->setGeometry(QRect(440, 30, 171, 31));
         PCLViewer->setCentralWidget(centralwidget);
 
         retranslateUi(PCLViewer);

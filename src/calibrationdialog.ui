@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1019</width>
-    <height>539</height>
+    <width>1133</width>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,10 +59,10 @@
   <widget class="QVTKWidget" name="qvtkWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>50</y>
-     <width>701</width>
-     <height>421</height>
+     <x>230</x>
+     <y>20</y>
+     <width>881</width>
+     <height>551</height>
     </rect>
    </property>
   </widget>
