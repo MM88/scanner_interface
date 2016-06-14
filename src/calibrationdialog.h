@@ -21,8 +21,6 @@
 
 
 namespace Ui {
-//void keyboardEventOccurred(const pcl::visualization::KeyboardEvent &event, void* args);
-//void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
 
 class CalibrationDialog;
 }
@@ -36,9 +34,8 @@ public:
     explicit CalibrationDialog(QWidget *parent = 0);
     ~CalibrationDialog();
     void updateClickedPoints();
-    static void keybordEventWrapper(const pcl::visualization::KeyboardEvent& event, void* );
-    void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event);
-    static void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
+    void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event, void*);
+    void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void*) ;
 
     void doubleVisualization(std::string name1, std::string name2);
 

@@ -28,14 +28,9 @@ CalibrationDialog::CalibrationDialog(QWidget *parent) :
     grabber = CloudsGrabber::Instance();
     doubleViewer.reset (new pcl::visualization::PCLVisualizer ("calibration viewer", false));
 
-//ui->qvtkWidget->update ();
     ui->qvtkWidget->SetRenderWindow (doubleViewer->getRenderWindow ());
     doubleViewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
-     doubleViewer->getInteractorStyle ()->setKeyboardModifier (pcl::visualization::INTERACTOR_KB_MOD_SHIFT);
-//    doubleViewer->setBackgroundColor(0.3, 0.3, 0.3);
-//    pcl::PointCloud<pointT>::Ptr emptyCloud (new pcl::PointCloud<pointT>);
-//    doubleViewer->addPointCloud (emptyCloud, "cloud",0);
-
+//    doubleViewer->getInteractorStyle ()->setKeyboardModifier (pcl::visualization::INTERACTOR_KB_MOD_SHIFT);
 
     doubleViewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
     doubleViewer->setCameraPosition(0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 1.0, 0.0, v1);
@@ -108,18 +103,12 @@ void CalibrationDialog::updateClickedPoints() {
     doubleViewer->addText("Prossimo colore: " + colorName, 10, 10, (isSecondCloud ? "v2_text" : "v1_text"), n_view);
 }
 
-void CalibrationDialog::keybordEventWrapper( const pcl::visualization::KeyboardEvent& event, void* )
-        {
-            if( event.getKeyCode() && event.keyDown() ){
-                std::cout << "Key : " << event.getKeyCode() << std::endl;
-//                dialog()->keyboardEventOccurred(event);
-            }
-        }
-
 // premendo "z" da tastiera elimina l'ultimo punto preso
-void CalibrationDialog::keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event) {
+void CalibrationDialog::keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event,void*) {
 
-     std::cout << "Key pressed: " << event.getKeyCode() << "\n";
+    if( event.getKeyCode() && event.keyDown() ){
+        std::cout << "Key : " << event.getKeyCode() << std::endl;
+    }
 
     if (event.getKeySym() == "z" && event.keyDown() && canIRollBack) {
 
@@ -135,39 +124,39 @@ void CalibrationDialog::keyboardEventOccurred(const pcl::visualization::Keyboard
 }
 
 //// gestione evento di selezione di un punto della cloud in visuale doppia
-void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) {
-//    pointT current_point;
-//    isSecondCloud = false;
+void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* ) {
+    pointT current_point;
+    isSecondCloud = false;
 
     cout << " -> selezionato il punto numero " << event.getPointIndex();
-//    event.getPoint(current_point.x, current_point.y, current_point.z);
+    event.getPoint(current_point.x, current_point.y, current_point.z);
 
-//    // verifico la validità del punto
-//    if ((current_point.z > TRANLSATION_Z_SECOND_CLOUD ? points_right : points_left).checkPointError(event.getPointIndex(), current_point)) {
-//        cout << " -> punto non valido!" << endl;
-//        return;
-//    }
-//    // se è un punto valido consento l'annullamento e procedo ad inserirlo
-//    canIRollBack = true;
+    // verifico la validità del punto
+    if ((current_point.z > TRANLSATION_Z_SECOND_CLOUD ? points_right : points_left).checkPointError(event.getPointIndex(), current_point)) {
+        cout << " -> punto non valido!" << endl;
+        return;
+    }
+    // se è un punto valido consento l'annullamento e procedo ad inserirlo
+    canIRollBack = true;
 
-//    // identifico prima o seconda cloud
-//    if (current_point.z > TRANLSATION_Z_SECOND_CLOUD)
-//        isSecondCloud = true;
+    // identifico prima o seconda cloud
+    if (current_point.z > TRANLSATION_Z_SECOND_CLOUD)
+        isSecondCloud = true;
 
-//    cout << " - coordinate (" << current_point.x << ", " << current_point.y << ", " << current_point.z << ") ";
-//    cout << "cloud " << (isSecondCloud ? "destra." : "sinistra.") << endl;
+    cout << " - coordinate (" << current_point.x << ", " << current_point.y << ", " << current_point.z << ") ";
+    cout << "cloud " << (isSecondCloud ? "destra." : "sinistra.") << endl;
 
-//    // coloro il punto
-//    current_point = (isSecondCloud ? color_right : color_left).colorize(current_point); pcl::PointCloud<pointT>::Ptr emptyCloud1 (new pcl::PointCloud<pointT>);
-//    doubleViewer->addPointCloud (emptyCloud1, "1",v1);
-//    // lo aggiungo alla nuovola dei selezionati
-//    (isSecondCloud ? clicked_points2 : clicked_points)->points.push_back(current_point);
-//    updateClickedPoints();
-//    // salvo i punti presi
-//    (isSecondCloud ? points_right : points_left).add(event.getPointIndex(), current_point);
+    // coloro il punto
+    current_point = (isSecondCloud ? color_right : color_left).colorize(current_point); pcl::PointCloud<pointT>::Ptr emptyCloud1 (new pcl::PointCloud<pointT>);
+    doubleViewer->addPointCloud (emptyCloud1, "1",v1);
+    // lo aggiungo alla nuovola dei selezionati
+    (isSecondCloud ? clicked_points2 : clicked_points)->points.push_back(current_point);
+    updateClickedPoints();
+    // salvo i punti presi
+    (isSecondCloud ? points_right : points_left).add(event.getPointIndex(), current_point);
 
-//    // passo al colore successivo
-//    (isSecondCloud ? color_right : color_left).nextColor();
+    // passo al colore successivo
+    (isSecondCloud ? color_right : color_left).nextColor();
 }
 // visualizzazione doppia
 void CalibrationDialog::doubleVisualization( string name1, string name2) {
@@ -199,11 +188,7 @@ void CalibrationDialog::doubleVisualization( string name1, string name2) {
     clicked_points = clicked_points2_app;
     clicked_points2 = clicked_points2_app;
 
-    // creo la finestra
-//    boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));
-//    doubleViewer = viewer;
-//        viewer->initCameraParameters();
-//        viewer->setSize(1200, 650);
+
 
 
     // assegno la prima cloud
@@ -228,15 +213,10 @@ void CalibrationDialog::doubleVisualization( string name1, string name2) {
     doubleViewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "2");
 
     doubleViewer->setCameraPosition(0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD, 0.0, 0.0, TRANLSATION_Z_SECOND_CLOUD + 0.15, 0.0, 1.0, 0.0, v2);
-    // gestione separata della telecamera
-//    doubleViewer->createViewPortCamera(v2);
-    QWidget * dialog = this;
-//    boost::function<void (const pcl::visualization::KeyboardEvent &)> f2( boost::bind( CalibrationDialog::keyboardEventOccurred, &doubleViewer ) );
-//    boost::function<void( const pcl::visualization::KeyboardEvent & ) > callback = boost::bind( &CalibrationDialog::keyboardEventOccurred, this, _1 );
-//    doubleViewer->registerKeyboardCallback( f2 );
 
-    doubleViewer->registerKeyboardCallback(CalibrationDialog::keybordEventWrapper,(void*)&doubleViewer);
-    doubleViewer->registerPointPickingCallback(CalibrationDialog::pointPickDoubleViewEvent, (void*)&doubleViewer);
+
+    doubleViewer->registerKeyboardCallback(&CalibrationDialog::keyboardEventOccurred, *this);
+    doubleViewer->registerPointPickingCallback(&CalibrationDialog::pointPickDoubleViewEvent, *this);
 
     while (!doubleViewer->wasStopped()) {
         doubleViewer->spinOnce(100);
