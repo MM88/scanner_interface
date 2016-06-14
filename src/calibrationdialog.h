@@ -21,6 +21,9 @@
 
 
 namespace Ui {
+//void keyboardEventOccurred(const pcl::visualization::KeyboardEvent &event, void* args);
+//void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
+
 class CalibrationDialog;
 }
 
@@ -32,15 +35,18 @@ public:
 
     explicit CalibrationDialog(QWidget *parent = 0);
     ~CalibrationDialog();
-//    void loop_view(boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer) ;
     void updateClickedPoints();
-    void keyboardEventOccurred(const pcl::visualization::KeyboardEvent &event, void* args);
-    void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
+    static void keybordEventWrapper(const pcl::visualization::KeyboardEvent& event, void* );
+    void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event);
+    static void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void* args) ;
+
     void doubleVisualization(std::string name1, std::string name2);
 
+    boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
+
+    boost::shared_ptr<pcl::visualization::PCLVisualizer> getDoubleViewer() const;
 
 protected:
-    boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
     std::vector<RScloud> pointcloudvector;
 
 
@@ -52,6 +58,7 @@ private slots:
     void on_calibButton_clicked();
 
 private:
+
 
     Ui::CalibrationDialog *ui;
     CloudsGrabber *grabber;
@@ -65,8 +72,6 @@ private:
 
 //    unsigned int click_id = 1; // per il mouse event
 
-    // non riesco a recuperare la view dalle varie callback, così me la salvo globale e ciao
-//    boost::shared_ptr<pcl::visualization::PCLVisualizer> global_viewer;
     int v1, v2; // conterranno l'id delle due visualizzazioni, necessari per riferirsi a loro successivamente
 
     pcl::PointCloud<pointT>::Ptr clicked_points;
