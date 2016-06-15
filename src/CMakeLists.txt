@@ -37,6 +37,11 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 message(${OpenCV_INCLUDE_DIRS})
 set(LIBS ${LIBS} ${OpenCV_LIBS})
 
+#################################### Locate Eigen ############################################# 
+
+pkg_check_modules( EIGEN3 REQUIRED eigen3 )
+include_directories( ${EIGEN3_INCLUDE_DIRS} )
+
 ##########################################################################################
 
 QT4_WRAP_CPP (project_HEADERS_MOC   ${project_HEADERS})
@@ -49,5 +54,5 @@ ADD_EXECUTABLE  (pcl_visualizer ${project_SOURCES}
                                 ${project_FORMS_HEADERS}
                                 ${project_HEADERS_MOC})
 
-TARGET_LINK_LIBRARIES (pcl_visualizer ${PCL_LIBRARIES} ${QT_LIBRARIES} ${VTK_LIBRARIES} ${LIBS})
+TARGET_LINK_LIBRARIES (pcl_visualizer ${PCL_LIBRARIES} ${QT_LIBRARIES} ${VTK_LIBRARIES} ${LIBS} ${EIGEN3_INCLUDE_DIR})
 

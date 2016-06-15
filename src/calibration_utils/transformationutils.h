@@ -2,6 +2,8 @@
 #define TRANSFORMATIONUTILS_H
 
 #include <pcl/point_types.h>
+#include <Eigen/Core>
+#include <Eigen/SVD>
 
 #define pointT pcl::PointXYZRGB // con colori
 //#define pointTnormal pcl::PointXYZRGBNormal // con colori

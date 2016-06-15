@@ -17,6 +17,7 @@
 -I/home/miky/appz/librealsense/include
 -I/usr/local/include/opencv
 -I/usr/local/include
+-I/usr/include/eigen3
 -DDISABLE_ENSENSO
 -DDISABLE_DAVIDSDK
 -DDISABLE_DSSDK

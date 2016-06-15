@@ -680,3 +680,32 @@ int main(int argc, char** argv)
 #endif
 }
 
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1423365247/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1423365247.dir/build.make CMakeFiles/cmTryCompileExec1423365247.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1423365247.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1423365247.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTryCompileExec1423365247
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1423365247.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec1423365247.dir/CheckSymbolExists.cxx.o  -o cmTryCompileExec1423365247 -rdynamic 
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

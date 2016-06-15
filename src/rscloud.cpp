@@ -23,7 +23,6 @@ void RScloud::smooth_cloud() {
         }
     }
     pointcloud = cloud_smoothed;
-
 }
 
 pcl::PointCloud<pointT>::Ptr RScloud::getPointcloud() const
@@ -52,7 +51,7 @@ void RScloud::filter_cloud() {
     pass.setInputCloud(pointcloud) ;
 
     pass.setFilterFieldName("z" ) ;
-    pass.setFilterLimits(0.0,0.35);
+    pass.setFilterLimits(0.12,0.35);
     pass.filter(*pointcloud);
 
     pass.setInputCloud(pointcloud) ;
@@ -71,7 +70,6 @@ void RScloud::filter_cloud() {
     sor.setStddevMulThresh (0.2);
     sor.filter (*pointcloud);
 
-    pcl::io::savePLYFileBinary("/home/miky/Scrivania/cloud2.ply", *pointcloud);
 }
 
 
@@ -157,9 +155,9 @@ void RScloud::processCloud() {
 
     //point_cloud_maker();
     filter_cloud();
-    delete_boundaries(3);
+    delete_boundaries(2);
     smooth_cloud();
-    polygonmesh = triangulate_cloud();
+//    polygonmesh = triangulate_cloud();
 //    pcl::io::savePLYFileBinary("/home/miky/Scrivania/ciccia.ply", polygonmesh);
 
 }

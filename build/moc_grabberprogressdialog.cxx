@@ -30,14 +30,14 @@ static const uint qt_meta_data_GrabberProgressDialog[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      44,   22,   23,   22, 0x0a,
-      54,   22,   22,   22, 0x0a,
+      40,   22,   23,   22, 0x0a,
+      50,   22,   22,   22, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_GrabberProgressDialog[] = {
-    "GrabberProgressDialog\0\0std::vector<RScloud>\0"
+    "GrabberProgressDialog\0\0pcl::PolygonMesh\0"
     "perform()\0cancel()\0"
 };
 
@@ -47,8 +47,8 @@ void GrabberProgressDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         Q_ASSERT(staticMetaObject.cast(_o));
         GrabberProgressDialog *_t = static_cast<GrabberProgressDialog *>(_o);
         switch (_id) {
-        case 0: { std::vector<RScloud> _r = _t->perform();
-            if (_a[0]) *reinterpret_cast< std::vector<RScloud>*>(_a[0]) = _r; }  break;
+        case 0: { pcl::PolygonMesh _r = _t->perform();
+            if (_a[0]) *reinterpret_cast< pcl::PolygonMesh*>(_a[0]) = _r; }  break;
         case 1: _t->cancel(); break;
         default: ;
         }

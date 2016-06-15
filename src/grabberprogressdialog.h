@@ -10,6 +10,7 @@
 #include <QProgressDialog>
 #include <QTimer>
 #include "cloudsgrabber.h"
+#include <pcl/point_types.h>
 
 using namespace std;
 using namespace pcl;
@@ -22,7 +23,7 @@ public:
     signals:
 
 public slots:
-    std::vector<RScloud>  perform();
+    pcl::PolygonMesh perform();
     void cancel();
 
 private:

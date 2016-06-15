@@ -14,7 +14,6 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHeaderView>
-#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
 #include <QtGui/QWidget>
@@ -30,7 +29,6 @@ public:
     QPushButton *scanButton;
     QPushButton *saveButton;
     QPushButton *calibButton;
-    QLineEdit *savePath;
 
     void setupUi(QMainWindow *PCLViewer)
     {
@@ -43,19 +41,16 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         qvtkWidget = new QVTKWidget(centralwidget);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
-        qvtkWidget->setGeometry(QRect(20, 120, 821, 471));
+        qvtkWidget->setGeometry(QRect(10, 90, 841, 511));
         scanButton = new QPushButton(centralwidget);
         scanButton->setObjectName(QString::fromUtf8("scanButton"));
-        scanButton->setGeometry(QRect(30, 30, 151, 31));
+        scanButton->setGeometry(QRect(20, 20, 231, 41));
         saveButton = new QPushButton(centralwidget);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
-        saveButton->setGeometry(QRect(670, 30, 121, 31));
+        saveButton->setGeometry(QRect(590, 20, 241, 41));
         calibButton = new QPushButton(centralwidget);
         calibButton->setObjectName(QString::fromUtf8("calibButton"));
-        calibButton->setGeometry(QRect(210, 30, 161, 31));
-        savePath = new QLineEdit(centralwidget);
-        savePath->setObjectName(QString::fromUtf8("savePath"));
-        savePath->setGeometry(QRect(440, 30, 171, 31));
+        calibButton->setGeometry(QRect(300, 20, 251, 41));
         PCLViewer->setCentralWidget(centralwidget);
 
         retranslateUi(PCLViewer);

@@ -5,8 +5,11 @@
 #include <stdio.h>
 #include <QPushButton>
 #include <fstream>
+#include <iostream>
+#include <string>
 #include "cloudsgrabber.h"
 #include "rscloud.h"
+#include <boost/algorithm/string.hpp>
 
 using namespace rs;
 using namespace cv;
@@ -130,39 +133,55 @@ void CloudsGrabber::grabClouds()
 
     for (int i=0;i<txtcloudvector.size();i++){
             PointCloud<pointT>::Ptr cloud = txt2pointcloud(txtcloudvector[i]);
-
-//            std::ostringstream matrixPath;
-//            std::string data;
-//            Eigen::Matrix4f transformMatrix = Eigen::Matrix4f::Identity();
-//            matrixPath << "./matrix_"<<i<<".txt";
-//            std::ifstream textMatrix(matrixPath.str());
-//            if (textMatrix.is_open()){
-//            getline(textMatrix, data);
-//            for (int j=0;j<3;j++) {
-//                    std::vector<std::string> x;
-//                    boost::split(x,data, boost::is_any_of("\t "));
-//                    transformMatrix (j,0) = atof(x[0]);
-//                    transformMatrix (j,1) = atof(x[1]);
-//                    transformMatrix (j,2) = atof(x[2]);
-//                    transformMatrix (j,3) = atof(x[3]);
-//                    getline(in, data);
-//                }
-//            textMatrix.close();
-//            }
-//            pcl::transformPointCloud (*cloud, cloud, transformMatrix);
             RScloud rscloud;
             rscloud.setPointcloud(cloud);
             pointcloudvector.push_back(rscloud);
         }
-
     std::cout << "cloud points " << pointcloudvector[0].getPointcloud()->points.size() << std::endl;
     std::cout << "done saving." << std::endl;
 
     return;
 }
 
-PointCloud<pointT>::Ptr CloudsGrabber::txt2pointcloud(std::vector<float3rgb> txtcloud) {
+void CloudsGrabber::transformClouds()
+{
+    for (int i=0;i<pointcloudvector.size();i++){
 
+            std::ostringstream matrixPath;
+            std::string data;
+            Eigen::Matrix4f transformMatrix = Eigen::Matrix4f::Identity();
+            matrixPath << "./cloud_registrazione/matrix_"<<i<<".txt";
+            std::ifstream textMatrix(matrixPath.str());
+            if (textMatrix.is_open()){
+            getline(textMatrix, data);
+            for (int j=0;j<4;j++) {
+                std::vector<std::string> x;
+                boost::split(x,data, boost::is_any_of("\t "));
+                std::stringstream ss;
+                ss << x[0];
+                ss >> transformMatrix(j,0);
+                ss.clear();
+                ss << x[1];
+                ss >> transformMatrix(j,1);
+                ss.clear();
+                ss << x[2];
+                ss >> transformMatrix(j,2);
+                ss.clear();
+                ss << x[3];
+                ss >> transformMatrix(j,3);
+                ss.clear();
+                getline(textMatrix, data);
+             }
+            textMatrix.close();
+            }
+            pcl::PointCloud<pointT>::Ptr appCloud (new pcl::PointCloud<pointT>);
+            pcl::transformPointCloud (*pointcloudvector[i].getPointcloud(), *appCloud, transformMatrix);
+            pointcloudvector[i].setPointcloud(appCloud);
+        }
+}
+
+PointCloud<pointT>::Ptr CloudsGrabber::txt2pointcloud(std::vector<float3rgb> txtcloud)
+{
     pcl::PointCloud<pointT>::Ptr cloud (new pcl::PointCloud<pointT>);
 
     for (int j=0;j<txtcloud.size();j++){
@@ -173,16 +192,17 @@ PointCloud<pointT>::Ptr CloudsGrabber::txt2pointcloud(std::vector<float3rgb> txt
         p.r = txtcloud[j].r;
         p.g = txtcloud[j].g;
         p.b = txtcloud[j].b;
-
         cloud->push_back(p);
     }
     return cloud;
 }
+
 void CloudsGrabber::processClouds()
 {
     for (int i=0;i<pointcloudvector.size();i++)
         pointcloudvector[i].processCloud();
 }
+
 std::vector<RScloud> CloudsGrabber::getPointcloudvector() const
 {
     return pointcloudvector;

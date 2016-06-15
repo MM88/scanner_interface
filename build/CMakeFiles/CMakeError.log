@@ -406,3 +406,105 @@ int main(int argc, char** argv)
 #endif
 }
 
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1416878783/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1416878783.dir/build.make CMakeFiles/cmTryCompileExec1416878783.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1416878783.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1416878783.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec1416878783.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec1416878783.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec1416878783.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec1416878783/fast" non riuscito
+make: *** [cmTryCompileExec1416878783/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3790814028/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3790814028.dir/build.make CMakeFiles/cmTryCompileExec3790814028.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3790814028.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3790814028.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3790814028.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec3790814028.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec3790814028.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec3790814028/fast" non riuscito
+make: *** [cmTryCompileExec3790814028/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3266164196/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3266164196.dir/build.make CMakeFiles/cmTryCompileExec3266164196.dir/build
+make[1]: ingresso nella directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+/usr/bin/cmake -E cmake_progress_report /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3266164196.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3266164196.dir/CheckSymbolExists.cxx.o -c /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3266164196.dir/build.make:57: set di istruzioni per l'obiettivo "CMakeFiles/cmTryCompileExec3266164196.dir/CheckSymbolExists.cxx.o" non riuscito
+make[1]: uscita dalla directory "/home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp"
+make[1]: *** [CMakeFiles/cmTryCompileExec3266164196.dir/CheckSymbolExists.cxx.o] Errore 1
+Makefile:117: set di istruzioni per l'obiettivo "cmTryCompileExec3266164196/fast" non riuscito
+make: *** [cmTryCompileExec3266164196/fast] Errore 2
+
+File /home/miky/QtCreatorProjects/scanner_interface/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

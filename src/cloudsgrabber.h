@@ -21,6 +21,7 @@ class CloudsGrabber {
 public:
 
     void grabClouds();
+    void transformClouds();
     void processClouds();
 
 public slots:

@@ -21,7 +21,7 @@ PCLViewer::PCLViewer (QWidget *parent) :
   viewer.reset (new pcl::visualization::PCLVisualizer ("viewer", false));
   ui->qvtkWidget->SetRenderWindow (viewer->getRenderWindow ());
   viewer->setupInteractor (ui->qvtkWidget->GetInteractor (), ui->qvtkWidget->GetRenderWindow ());
-  viewer->setBackgroundColor(0.4, 0.4, 0.4);
+  viewer->setBackgroundColor(0.6, 0.6, 0.6);
   pcl::PolygonMesh::Ptr emptyMesh (new pcl::PolygonMesh);
   viewer->addPolygonMesh(*emptyMesh,"cloud",0);
   ui->qvtkWidget->update ();
@@ -64,18 +64,21 @@ void PCLViewer::on_saveButton_clicked()
 void PCLViewer::on_scanButton_clicked()
 {
     rsgrabber = new GrabberProgressDialog;
-    mesh = rsgrabber->perform()[0].getPolygonmesh();
+
+    mesh = rsgrabber->perform();
+
     viewer->removePolygonMesh("cloud",0);
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();
     ui->saveButton->setEnabled(true);
     ui->scanButton->update();
+    ui->calibButton->update();
 }
-
 
 void PCLViewer::on_calibButton_clicked()
 {
     calibDialog = new CalibrationDialog(this);
     calibDialog->show();
+    ui->calibButton->update();
 }

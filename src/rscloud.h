@@ -40,7 +40,7 @@ private:
 
     void smooth_cloud();
     void delete_boundaries(int num_border_to_remove);
-    pcl::PolygonMesh triangulate_cloud();
+
 
 public:
 
@@ -48,6 +48,7 @@ public:
     virtual ~RScloud() { }
     RScloud() {}
     void processCloud();
+    pcl::PolygonMesh triangulate_cloud();
     pcl::PointCloud<pointT>::Ptr getPointcloud() const;
     void setPointcloud(const pcl::PointCloud<pointT>::Ptr &value);
     pcl::PolygonMesh getPolygonmesh() const;

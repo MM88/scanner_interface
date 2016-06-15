@@ -15,7 +15,7 @@
 
 #define pointT pcl::PointXYZRGB // con colori
 //#define pointTnormal pcl::PointXYZRGBNormal // con colori
-// #define pointT pcl::PointXYZ // senza colori
+//#define pointT pcl::PointXYZ // senza colori
  #define pointTnormal pcl::Normal // senza colori
 #define TRANLSATION_Z_SECOND_CLOUD 3.0 // 3 metri lungo la Z (meglio della X o Y perché sempre positiva)
 
@@ -38,10 +38,9 @@ public:
     void pointPickDoubleViewEvent(const pcl::visualization::PointPickingEvent& event, void*) ;
 
     void doubleVisualization(std::string name1, std::string name2);
+    Eigen::Matrix4f icp( Eigen::Matrix4f T);
 
     boost::shared_ptr<pcl::visualization::PCLVisualizer> doubleViewer;
-
-    boost::shared_ptr<pcl::visualization::PCLVisualizer> getDoubleViewer() const;
 
 protected:
     std::vector<RScloud> pointcloudvector;
@@ -69,7 +68,7 @@ private:
 
 //    unsigned int click_id = 1; // per il mouse event
 
-    int v1, v2; // conterranno l'id delle due visualizzazioni, necessari per riferirsi a loro successivamente
+    int v1, v2;
 
     pcl::PointCloud<pointT>::Ptr clicked_points;
     pcl::PointCloud<pointT>::Ptr clicked_points2;

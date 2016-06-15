@@ -21,8 +21,7 @@ SOURCES += main.cpp \
     calibration_utils/main.cpp \
     calibration_utils/colorring.cpp \
     calibration_utils/pointcatched.cpp \
-    calibration_utils/transformationutils.cpp \
-    calibration_utils/visualizationutils.cpp
+    calibration_utils/transformationutils.cpp
 
 HEADERS  += \
     mainwindow.h \
@@ -32,8 +31,7 @@ HEADERS  += \
     grabberprogressdialog.h \
     calibration_utils/colorring.h \
     calibration_utils/pointcatched.h \
-    calibration_utils/transformationutils.h \
-    calibration_utils/visualizationutils.h
+    calibration_utils/transformationutils.h
 
 FORMS    += \
     mainwindow.ui \
