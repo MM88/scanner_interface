@@ -47,27 +47,27 @@ void RScloud::setPolygonmesh(const pcl::PolygonMesh &value)
 
 void RScloud::filter_cloud() {
 
-    pcl::PassThrough<pointT> pass ;
-    pass.setInputCloud(pointcloud) ;
+//    pcl::PassThrough<pointT> pass ;
+//    pass.setInputCloud(pointcloud) ;
 
-    pass.setFilterFieldName("z" ) ;
-    pass.setFilterLimits(0.12,0.35);
-    pass.filter(*pointcloud);
+//    pass.setFilterFieldName("z" ) ;
+//    pass.setFilterLimits(0.12,0.35);
+//    pass.filter(*pointcloud);
 
-    pass.setInputCloud(pointcloud) ;
-    pass.setFilterFieldName("x" ) ;
-    pass.setFilterLimits(-0.17, 0.12);
-    pass.filter(*pointcloud);
+//    pass.setInputCloud(pointcloud) ;
+//    pass.setFilterFieldName("x" ) ;
+//    pass.setFilterLimits(-0.17, 0.12);
+//    pass.filter(*pointcloud);
 
-    pass.setInputCloud(pointcloud) ;
-    pass.setFilterFieldName("y" ) ;
-    pass.setFilterLimits(-0.09, 0.2);
-    pass.filter(*pointcloud);
+//    pass.setInputCloud(pointcloud) ;
+//    pass.setFilterFieldName("y" ) ;
+//    pass.setFilterLimits(-0.09, 0.2);
+//    pass.filter(*pointcloud);
 
     pcl::StatisticalOutlierRemoval<pointT> sor;
     sor.setInputCloud (pointcloud);
-    sor.setMeanK (20);
-    sor.setStddevMulThresh (0.2);
+    sor.setMeanK (100);
+    sor.setStddevMulThresh (0.8);
     sor.filter (*pointcloud);
 
 }
@@ -155,7 +155,7 @@ void RScloud::processCloud() {
 
     //point_cloud_maker();
     filter_cloud();
-    delete_boundaries(2);
+//    delete_boundaries(2);
     smooth_cloud();
 //    polygonmesh = triangulate_cloud();
 //    pcl::io::savePLYFileBinary("/home/miky/Scrivania/ciccia.ply", polygonmesh);

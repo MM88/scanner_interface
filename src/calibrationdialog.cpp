@@ -63,8 +63,14 @@ CalibrationDialog::~CalibrationDialog()
 void CalibrationDialog::on_comboBox_currentIndexChanged(const QString &arg1)
 {
     if (arg1.contains("coppia di camere")){
+        doubleViewer->removePointCloud("clicked_right");
+        doubleViewer->removePointCloud("clicked_left");
         doubleViewer->removePointCloud("1",v1);
         doubleViewer->removePointCloud("2",v2);
+        points_left.clear_stack();
+        points_right.clear_stack();
+        color_left.restart();
+        color_right.restart();
         ui->qvtkWidget->update ();
     }else{
         doubleViewer->removePointCloud("clicked_right");
@@ -89,6 +95,11 @@ void CalibrationDialog::on_getCloudsButton_clicked()
         std::stringstream fileName;
         fileName<<"./cloud_registrazione/cloud"<<i<<".ply";
         pointcloudvector[i].filter_cloud();
+//        pointcloudvector[i].smooth_cloud();
+//        pointcloudvector[i].delete_boundaries(2);
+//        std::stringstream file;
+//        file<<"/home/miky/Scrivania/cloud"<<i<<".ply";
+//        pcl::io::savePLYFileBinary (file.str(), *pointcloudvector[i].getPointcloud());
         pcl::io::savePLYFileBinary (fileName.str(), *pointcloudvector[i].getPointcloud());
     }
     ui->comboBox->setCurrentIndex(0);
@@ -137,6 +148,7 @@ void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::Point
 
     cout << " -> selezionato il punto numero " << event.getPointIndex();
     event.getPoint(current_point.x, current_point.y, current_point.z);
+
     // verifico la validità del punto
     if ((current_point.z > TRANLSATION_Z_SECOND_CLOUD ? points_right : points_left).checkPointError(event.getPointIndex(), current_point)) {
         cout << " -> punto non valido!" << endl;
@@ -145,8 +157,24 @@ void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::Point
     // se è un punto valido consento l'annullamento e procedo ad inserirlo
     canIRollBack = true;
     // identifico prima o seconda cloud
-    if (current_point.z > TRANLSATION_Z_SECOND_CLOUD)
+    if (current_point.z > TRANLSATION_Z_SECOND_CLOUD){
         isSecondCloud = true;
+        pcl::PointXYZ selected_point;
+
+        selected_point.x = current_point.x;
+        selected_point.y = current_point.y;
+        selected_point.z = current_point.z-TRANLSATION_Z_SECOND_CLOUD;
+         dst_pc_.points.push_back(selected_point);
+    }else{
+        pcl::PointXYZ selected_point;
+
+        selected_point.x = current_point.x;
+        selected_point.y = current_point.y;
+        selected_point.z = current_point.z;
+        src_pc_.points.push_back(selected_point);
+    }
+
+
     cout << " - coordinate (" << current_point.x << ", " << current_point.y << ", " << current_point.z << ") ";
     cout << "cloud " << (isSecondCloud ? "destra." : "sinistra.") << endl;
     // coloro il punto
@@ -186,6 +214,12 @@ void CalibrationDialog::doubleVisualization( string name1, string name2)
     color_right.restart();
     clicked_points = clicked_points2_app;
     clicked_points2 = clicked_points2_app;
+
+    src_pc_.points.clear();
+    dst_pc_.points.clear();
+//    src_pc_.height = 1; src_pc_.width = 0;
+//    dst_pc_.height = 1; dst_pc_.width = 0;
+
 
     // assegno la prima cloud
     doubleViewer->addText("Prossimo colore: " + color_left.getColorName(), 10, 10, "v1_text", v1);
@@ -238,7 +272,13 @@ void CalibrationDialog::on_calibButton_clicked()
         return;
     }
 
-    Eigen::Matrix4f T = TransformationUtils::trovaT(Mx, My);
+//    Eigen::Matrix4f T = TransformationUtils::trovaT(Mx, My);
+
+    Eigen::Matrix4f T ;
+    pcl::registration::TransformationEstimationSVD<pcl::PointXYZ, pcl::PointXYZ> tfe;
+    tfe.estimateRigidTransformation(src_pc_, dst_pc_, T);
+
+    std::cout << "Transform : " << std::endl << T << std::endl;
     Eigen::Matrix4f T_icp = icp(T);
 
     std::stringstream outFileName;
@@ -283,7 +323,7 @@ Eigen::Matrix4f CalibrationDialog::icp( Eigen::Matrix4f T){
     icp.setInputTarget(cloud2);
     icp.setMaxCorrespondenceDistance(0.002);
     // Set the maximum number of iterations (criterion 1)
-    icp.setMaximumIterations(1000);
+    icp.setMaximumIterations(10000);
     // Set the transformation epsilon (criterion 2)
     icp.setTransformationEpsilon(1e-8);
     // Set the euclidean distance difference epsilon (criterion 3)

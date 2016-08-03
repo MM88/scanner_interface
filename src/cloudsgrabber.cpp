@@ -26,7 +26,6 @@ void CloudsGrabber::grabClouds()
 {
     pointcloudvector.clear();
     //... perform one percent of the operation
-    cout<<"ci sno"<<endl;
     // Turn on logging. We can separately enable logging to console or to file, and use different severity filters for each.
     rs::log_to_console(rs::log_severity::warn);
     //rs::log_to_file(rs::log_severity::debug, "librealsense.log");
@@ -55,6 +54,7 @@ void CloudsGrabber::grabClouds()
         dev->set_option((rs::option)12, (double)0); //laser power
         dev->set_option((rs::option)13, (double)1);  //accuracy
         dev->set_option((rs::option)15, (double)5); //filter option
+//        dev->set_option((rs::option)14, (double)0); //motion range
         std::cout << "done." << std::endl;
     }
 
@@ -62,7 +62,10 @@ void CloudsGrabber::grabClouds()
 
     const clock_t begin_time = clock(); //to check grabbing time
     std::vector<std::vector<float3rgb>> txtcloudvector;
-
+//    float time = 0;
+//    while (time < 300){
+//         time = float(clock () - begin_time)/  CLOCKS_PER_SEC;
+//    }
     for(auto dev : devices)
     {
         dev->set_option((rs::option)12, (double)16);
@@ -72,8 +75,8 @@ void CloudsGrabber::grabClouds()
 
         dev->wait_for_frames();
         // Retrieve our images
-        const uint16_t * depth_image = (const uint16_t *)dev->get_frame_data(rs::stream::depth);
-        const uint8_t * color_image = (const uint8_t *)dev->get_frame_data(rs::stream::color_aligned_to_depth); //
+        const uint16_t * depth_image = (const uint16_t *)dev->get_frame_data(rs::stream::depth_aligned_to_color);
+        const uint8_t * color_image = (const uint8_t *)dev->get_frame_data(rs::stream::color);
 
         cv::Mat image = cv::Mat::zeros(480,640,CV_8UC3);
         int count=0;
@@ -88,10 +91,11 @@ void CloudsGrabber::grabClouds()
            }
 
         // Retrieve camera parameters for mapping between depth and color
-        rs::intrinsics depth_intrin = dev->get_stream_intrinsics(rs::stream::depth);
-        rs::extrinsics depth_to_color = dev->get_extrinsics(rs::stream::depth, rs::stream::color);
+        rs::intrinsics depth_intrin = dev->get_stream_intrinsics(rs::stream::depth_aligned_to_color);
+        rs::extrinsics depth_to_color = dev->get_extrinsics(rs::stream::depth_aligned_to_color, rs::stream::color);
         rs::intrinsics color_intrin = dev->get_stream_intrinsics(rs::stream::color);
         float scale = dev->get_depth_scale();
+
 
         std::vector<float3rgb> point_cloud;
         for(int dy=0; dy<depth_intrin.height; dy++)

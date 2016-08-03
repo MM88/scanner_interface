@@ -34,14 +34,14 @@ public:
     {
         if (PCLViewer->objectName().isEmpty())
             PCLViewer->setObjectName(QString::fromUtf8("PCLViewer"));
-        PCLViewer->resize(857, 606);
+        PCLViewer->resize(1149, 703);
         PCLViewer->setMinimumSize(QSize(0, 0));
         PCLViewer->setMaximumSize(QSize(5000, 5000));
         centralwidget = new QWidget(PCLViewer);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         qvtkWidget = new QVTKWidget(centralwidget);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
-        qvtkWidget->setGeometry(QRect(10, 90, 841, 511));
+        qvtkWidget->setGeometry(QRect(10, 90, 1131, 601));
         scanButton = new QPushButton(centralwidget);
         scanButton->setObjectName(QString::fromUtf8("scanButton"));
         scanButton->setGeometry(QRect(20, 20, 231, 41));

@@ -38,9 +38,6 @@ private:
     pcl::PointCloud<pointT>::Ptr pointcloud;
     pcl::PolygonMesh polygonmesh;
 
-    void smooth_cloud();
-    void delete_boundaries(int num_border_to_remove);
-
 
 public:
 
@@ -53,6 +50,8 @@ public:
     void setPointcloud(const pcl::PointCloud<pointT>::Ptr &value);
     pcl::PolygonMesh getPolygonmesh() const;
     void setPolygonmesh(const pcl::PolygonMesh &value);
+    void smooth_cloud();
+    void delete_boundaries(int num_border_to_remove);
 };
 
 #endif // RSCLOUD

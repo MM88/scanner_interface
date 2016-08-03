@@ -54,12 +54,17 @@ pcl::PolygonMesh GrabberProgressDialog::perform()
     }
     RScloud rscloud;
     rscloud.setPointcloud(cloudSum);
+    rscloud.processCloud();
+            std::stringstream file;
+            file<<"/home/miky/Scrivania/cloudSum.ply";
+            pcl::io::savePLYFileBinary (file.str(), *rscloud.getPointcloud());
 
     steps++;
     pd->setValue(steps);
 
     boost::this_thread::sleep (boost::posix_time::seconds (1));
 
+//    rscloud.smooth_cloud();
     pcl::PolygonMesh mesh = rscloud.triangulate_cloud();
 
     steps++;

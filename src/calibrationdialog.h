@@ -66,6 +66,12 @@ private:
     pointCatched points_left;
     pointCatched points_right;
 
+    //attributi registrazione pcl
+//    pcl::PointXYZ                     src_point_;
+//    pcl::PointXYZ                     dst_point_;
+    pcl::PointCloud<pcl::PointXYZ>    src_pc_;
+    pcl::PointCloud<pcl::PointXYZ>    dst_pc_;
+
 //    unsigned int click_id = 1; // per il mouse event
 
     int v1, v2;

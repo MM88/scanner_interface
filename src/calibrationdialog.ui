@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>858</width>
-    <height>611</height>
+    <width>1150</width>
+    <height>703</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,11 +37,6 @@
      <string>0-2</string>
     </property>
    </item>
-   <item>
-    <property name="text">
-     <string>0-3</string>
-    </property>
-   </item>
   </widget>
   <widget class="QPushButton" name="calibButton">
    <property name="geometry">
@@ -61,8 +56,8 @@
     <rect>
      <x>10</x>
      <y>70</y>
-     <width>831</width>
-     <height>531</height>
+     <width>1131</width>
+     <height>621</height>
     </rect>
    </property>
   </widget>

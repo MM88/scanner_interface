@@ -33,7 +33,7 @@ public:
     {
         if (CalibrationDialog->objectName().isEmpty())
             CalibrationDialog->setObjectName(QString::fromUtf8("CalibrationDialog"));
-        CalibrationDialog->resize(858, 611);
+        CalibrationDialog->resize(1150, 703);
         comboBox = new QComboBox(CalibrationDialog);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(300, 10, 241, 41));
@@ -42,7 +42,7 @@ public:
         calibButton->setGeometry(QRect(570, 10, 241, 41));
         qvtkWidget = new QVTKWidget(CalibrationDialog);
         qvtkWidget->setObjectName(QString::fromUtf8("qvtkWidget"));
-        qvtkWidget->setGeometry(QRect(10, 70, 831, 531));
+        qvtkWidget->setGeometry(QRect(10, 70, 1131, 621));
         getCloudsButton = new QPushButton(CalibrationDialog);
         getCloudsButton->setObjectName(QString::fromUtf8("getCloudsButton"));
         getCloudsButton->setGeometry(QRect(20, 10, 241, 41));
@@ -60,7 +60,6 @@ public:
          << QApplication::translate("CalibrationDialog", "coppia di camere", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("CalibrationDialog", "0-1", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("CalibrationDialog", "0-2", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("CalibrationDialog", "0-3", 0, QApplication::UnicodeUTF8)
         );
         calibButton->setText(QApplication::translate("CalibrationDialog", "calibra", 0, QApplication::UnicodeUTF8));
         getCloudsButton->setText(QApplication::translate("CalibrationDialog", "Acquisisci nuvole", 0, QApplication::UnicodeUTF8));

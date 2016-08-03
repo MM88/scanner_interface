@@ -30,11 +30,6 @@ private:
     QProgressDialog *pd;
     CloudsGrabber *grabber;
 
-public:
-
-        void setOutPath(std::string outpath) {
-            GrabberProgressDialog::outPath = outpath;
-        }
 
 private:
         int steps;
@@ -42,7 +37,6 @@ private:
 //        bool filtering = true;
 //        bool remove_border = true;
 //        bool smoothing = true;
-        std::string outPath;
 
 };
 #endif // GRABBERPROGRESSDIALOG

@@ -1,3 +1,4 @@
+
 #include "mainwindow.h"
 #include "../build/ui_mainwindow.h"
 #include "grabberprogressdialog.h"
@@ -63,11 +64,11 @@ void PCLViewer::on_saveButton_clicked()
 
 void PCLViewer::on_scanButton_clicked()
 {
+    viewer->removePolygonMesh("cloud",0);
+    ui->qvtkWidget->update ();
     rsgrabber = new GrabberProgressDialog;
-
     mesh = rsgrabber->perform();
 
-    viewer->removePolygonMesh("cloud",0);
     viewer->addPolygonMesh (mesh, "cloud",0);
     viewer->resetCamera ();
     ui->qvtkWidget->update ();
