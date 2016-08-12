@@ -103,9 +103,9 @@ void VisualizationUtils::loop_view(boost::shared_ptr<pcl::visualization::PCLVisu
    void VisualizationUtils::vis_doppia( string name1, string name2) {
 
         std::stringstream firstCloud;
-        firstCloud<<"./cloud_registrazione/cloud"<<name1<<".ply";
+        firstCloud<<"./../registrazione/cloud"<<name1<<".ply";
         std::stringstream secondCloud;
-        secondCloud<<"./cloud_registrazione/cloud"<<name2<<".ply";
+        secondCloud<<"./../registrazione/cloud"<<name2<<".ply";
         cout<<firstCloud.str()<<endl;
         cout<<secondCloud.str()<<endl;
 

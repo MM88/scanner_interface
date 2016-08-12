@@ -20,7 +20,7 @@
 #include <pcl/surface/vtk_smoothing/vtk_mesh_subdivision.h>
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/filters/passthrough.h>
-#include <pcl/features/boundary.h>
+//#include <pcl/features/boundary.h>
 #include <pcl/console/time.h>
 #include <pcl/registration/transforms.h>
 
@@ -51,7 +51,7 @@ public:
     pcl::PolygonMesh getPolygonmesh() const;
     void setPolygonmesh(const pcl::PolygonMesh &value);
     void smooth_cloud();
-    void delete_boundaries(int num_border_to_remove);
+//    void delete_boundaries(int num_border_to_remove);
 };
 
 #endif // RSCLOUD

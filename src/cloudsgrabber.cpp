@@ -151,10 +151,75 @@ void CloudsGrabber::transformClouds()
 {
     for (int i=0;i<pointcloudvector.size();i++){
 
+            if(i==3){
+                std::ostringstream matrixPath1;
+                std::ostringstream matrixPath2;
+                std::string data1;
+                std::string data2;
+                Eigen::Matrix4f transformMatrix1 = Eigen::Matrix4f::Identity();
+                Eigen::Matrix4f transformMatrix2 = Eigen::Matrix4f::Identity();
+                matrixPath1 << "./../registrazione/matrix_"<<i<<".txt";
+                matrixPath2 << "./../registrazione/matrix_1.txt";
+
+                std::ifstream textMatrix1(matrixPath1.str());
+                if (textMatrix1.is_open()){
+                getline(textMatrix1, data1);
+                for (int j=0;j<4;j++) {
+                    std::vector<std::string> x1;
+                    boost::split(x1,data1, boost::is_any_of("\t "));
+                    std::stringstream ss1;
+                    ss1 << x1[0];
+                    ss1 >> transformMatrix1(j,0);
+                    ss1.clear();
+                    ss1 << x1[1];
+                    ss1 >> transformMatrix1(j,1);
+                    ss1.clear();
+                    ss1 << x1[2];
+                    ss1 >> transformMatrix1(j,2);
+                    ss1.clear();
+                    ss1 << x1[3];
+                    ss1 >> transformMatrix1(j,3);
+                    ss1.clear();
+                    getline(textMatrix1, data1);
+                 }
+                textMatrix1.close();
+                }
+                pcl::PointCloud<pointT>::Ptr appCloud1 (new pcl::PointCloud<pointT>);
+                pcl::transformPointCloud (*pointcloudvector[i].getPointcloud(), *appCloud1, transformMatrix1);
+                pointcloudvector[i].setPointcloud(appCloud);
+
+                std::ifstream textMatrix2(matrixPath2.str());
+                if (textMatrix2.is_open()){
+                getline(textMatrix2, data2);
+                for (int j=0;j<4;j++) {
+                    std::vector<std::string> x2;
+                    boost::split(x2,data2, boost::is_any_of("\t "));
+                    std::stringstream ss2;
+                    ss2 << x2[0];
+                    ss2 >> transformMatrix2(j,0);
+                    ss2.clear();
+                    ss2 << x2[1];
+                    ss2 >> transformMatrix2(j,1);
+                    ss2.clear();
+                    ss2 << x2[2];
+                    ss2 >> transformMatrix2(j,2);
+                    ss2.clear();
+                    ss2 << x2[3];
+                    ss2 >> transformMatrix2(j,3);
+                    ss2.clear();
+                    getline(textMatrix2, data2);
+                 }
+                textMatrix2.close();
+                }
+                pcl::PointCloud<pointT>::Ptr appCloud2 (new pcl::PointCloud<pointT>);
+                pcl::transformPointCloud (*pointcloudvector[i].getPointcloud(), *appCloud2, transformMatrix2);
+
+                pointcloudvector[i].setPointcloud(appCloud);
+            }
             std::ostringstream matrixPath;
             std::string data;
             Eigen::Matrix4f transformMatrix = Eigen::Matrix4f::Identity();
-            matrixPath << "./cloud_registrazione/matrix_"<<i<<".txt";
+            matrixPath << "./../registrazione/matrix_"<<i<<".txt";
             std::ifstream textMatrix(matrixPath.str());
             if (textMatrix.is_open()){
             getline(textMatrix, data);

@@ -55,9 +55,9 @@ pcl::PolygonMesh GrabberProgressDialog::perform()
     RScloud rscloud;
     rscloud.setPointcloud(cloudSum);
     rscloud.processCloud();
-            std::stringstream file;
-            file<<"/home/miky/Scrivania/cloudSum.ply";
-            pcl::io::savePLYFileBinary (file.str(), *rscloud.getPointcloud());
+//            std::stringstream file;
+//            file<<"/home/miky/Scrivania/cloudSum.ply";
+//            pcl::io::savePLYFileBinary (file.str(), *rscloud.getPointcloud());
 
     steps++;
     pd->setValue(steps);

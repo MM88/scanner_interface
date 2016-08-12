@@ -73,36 +73,36 @@ void RScloud::filter_cloud() {
 }
 
 
-void RScloud::delete_boundaries(int num_border_to_remove) {
+//void RScloud::delete_boundaries(int num_border_to_remove) {
 
-    for (int i=0;i<num_border_to_remove;i++){
+//    for (int i=0;i<num_border_to_remove;i++){
 
-        pcl::PointCloud<pointTnormal>::Ptr normals (new pcl::PointCloud<pointTnormal>);
-        pcl::NormalEstimation<pointT, pointTnormal> ne;
-        ne.setInputCloud (pointcloud);
-        pcl::search::KdTree<pointT>::Ptr tree (new pcl::search::KdTree<pointT> ());
-        ne.setSearchMethod (tree);
-        ne.setRadiusSearch (0.002);
-        ne.compute (*normals);
-        pcl::PointCloud<pcl::Boundary> boundaries;
-        pcl::BoundaryEstimation<pointT, pointTnormal, pcl::Boundary> est;
-        est.setInputCloud (pointcloud);
-        est.setInputNormals (normals);
-        est.setRadiusSearch (0.002);
-        est.setSearchMethod (pcl::search::KdTree<pointT>::Ptr (new pcl::search::KdTree<pointT>));
-        est.compute (boundaries);
+//        pcl::PointCloud<pointTnormal>::Ptr normals (new pcl::PointCloud<pointTnormal>);
+//        pcl::NormalEstimation<pointT, pointTnormal> ne;
+//        ne.setInputCloud (pointcloud);
+//        pcl::search::KdTree<pointT>::Ptr tree (new pcl::search::KdTree<pointT> ());
+//        ne.setSearchMethod (tree);
+//        ne.setRadiusSearch (0.002);
+//        ne.compute (*normals);
+//        pcl::PointCloud<pcl::Boundary> boundaries;
+//        pcl::BoundaryEstimation<pointT, pointTnormal, pcl::Boundary> est;
+//        est.setInputCloud (pointcloud);
+//        est.setInputNormals (normals);
+//        est.setRadiusSearch (0.002);
+//        est.setSearchMethod (pcl::search::KdTree<pointT>::Ptr (new pcl::search::KdTree<pointT>));
+//        est.compute (boundaries);
 
-        for(int i = 0; i < pointcloud->points.size(); i++)
-        {
-            if(boundaries[i].boundary_point == 1)
-            {
-                pointcloud->at(i).z = 0;
-                pointcloud->at(i).x = 0;
-                pointcloud->at(i).y = 0;
-            }
-        }
-    }
-}
+//        for(int i = 0; i < pointcloud->points.size(); i++)
+//        {
+//            if(boundaries[i].boundary_point == 1)
+//            {
+//                pointcloud->at(i).z = 0;
+//                pointcloud->at(i).x = 0;
+//                pointcloud->at(i).y = 0;
+//            }
+//        }
+//    }
+//}
 
 pcl::PolygonMesh RScloud::triangulate_cloud() {
 

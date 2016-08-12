@@ -93,7 +93,7 @@ void CalibrationDialog::on_getCloudsButton_clicked()
     pointcloudvector = grabber->getPointcloudvector();
     for (int i=0;i<pointcloudvector.size();i++){
         std::stringstream fileName;
-        fileName<<"./cloud_registrazione/cloud"<<i<<".ply";
+        fileName<<"./../registrazione/cloud"<<i<<".ply";
         pointcloudvector[i].filter_cloud();
 //        pointcloudvector[i].smooth_cloud();
 //        pointcloudvector[i].delete_boundaries(2);
@@ -192,9 +192,9 @@ void CalibrationDialog::pointPickDoubleViewEvent(const pcl::visualization::Point
 void CalibrationDialog::doubleVisualization( string name1, string name2)
 {
     std::stringstream firstCloud;
-    firstCloud<<"./cloud_registrazione/cloud"<<name1<<".ply";
+    firstCloud<<"./../registrazione/cloud"<<name1<<".ply";
     std::stringstream secondCloud;
-    secondCloud<<"./cloud_registrazione/cloud"<<name2<<".ply";
+    secondCloud<<"./../registrazione/cloud"<<name2<<".ply";
     cout<<firstCloud.str()<<endl;
     cout<<secondCloud.str()<<endl;
 
@@ -283,7 +283,7 @@ void CalibrationDialog::on_calibButton_clicked()
 
     std::stringstream outFileName;
     cout<<"il source è: "<<sourceCloudName<<endl;
-    outFileName<<"./cloud_registrazione/matrix_"<<sourceCloudName<<".txt";
+    outFileName<<"./../registrazione/matrix_"<<sourceCloudName<<".txt";
 
     std::ofstream output(outFileName.str().c_str());
     for (int k=0; k<T_icp.rows(); k++)
@@ -307,9 +307,9 @@ void CalibrationDialog::on_calibButton_clicked()
 Eigen::Matrix4f CalibrationDialog::icp( Eigen::Matrix4f T){
 
     std::stringstream firstCloud;
-    firstCloud<<"./cloud_registrazione/cloud"<<sourceCloudName<<".ply";
+    firstCloud<<"./../registrazione/cloud"<<sourceCloudName<<".ply";
     std::stringstream secondCloud;
-    secondCloud<<"./cloud_registrazione/cloud"<<targetCloudName<<".ply";
+    secondCloud<<"./../registrazione/cloud"<<targetCloudName<<".ply";
 
     pcl::PointCloud<pointT>::Ptr cloud1 (new pcl::PointCloud<pointT>);
     pcl::PointCloud<pointT>::Ptr cloud2 (new pcl::PointCloud<pointT>);
